@@ -18,8 +18,6 @@ Unofficial pages have also sprung up elsewhere:
 * IRC channel [#bunsenlabs@freenode](irc://chat.freenode.net:6697/#bunsenlabs)
 * [DeviantArt group](http://bunsenlabs.deviantart.com/)
 * On Google+, there is [BunsenLabs en Español](https://plus.google.com/communities/102155480089831191422)
-* User [Balloon](https://forums.bunsenlabs.org/viewtopic.php?pid=8855#p8855) has created an extensive resource in Japanese: [BunsenLabs Japan!・ブンゼンラボ ジャパン！](http://bunsenlabs-jp.jimdo.com/), including instructions and translations for a Japanese localization
-* There is a third-party German-speaking forum located [here](https://bunsenlabs-de.lima-city.de/index.php)
 
 ## Where is the BL source code?
 
