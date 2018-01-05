@@ -49,7 +49,7 @@ We offer combined [live-CD and installation
 media](/installation.html#live-cddvdusb-key-method) for the Debian
 **i386** (i686) and **amd64** (x86-64) architectures.
 
-However, you can install our [packages](/installation.html#repository-method) also on ARM platforms.
+However, you can install our [packages](/installation.html#package-based-install) also on ARM platforms.
 Our repository currently provides **[armhf](https://wiki.debian.org/ArmHardFloatPort)**.
 If you would like to see [another Debian ARM port](https://www.debian.org/ports/arm/) supported,
 file a request [here](https://forums.bunsenlabs.org/viewforum.php?id=13).
