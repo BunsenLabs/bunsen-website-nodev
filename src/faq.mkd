@@ -20,7 +20,7 @@ Unofficial pages have also sprung up elsewhere:
 * On Google+, there is [BunsenLabs en Español](https://plus.google.com/communities/102155480089831191422)
 * Subreddit [r/BunsenLabs](https://www.reddit.com/r/BunsenLabs/)
 * Facebook Group [#! BunsenLabs Linux](https://www.facebook.com/groups/43721619798/)
-* Group of Spanish-speaking users at [Telegram](https://t.me/esbunsenlabs)
+* Telegram group of Spanish-speaking users: [BunsenLabs ES](https://t.me/esbunsenlabs)
 
 ## Where is the BL source code?
 
