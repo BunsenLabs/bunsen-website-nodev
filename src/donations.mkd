@@ -43,18 +43,6 @@ link in order to support our hosting expenses directly:
 
 ## Funding status
 
-<div class="info">
-
-Dear donors and guests,
-
-PayPal changed things about their CSV export, so currently (2018-01) our
-PayPal integration is broken and the donation status is not getting
-updated (the last update date is wrong). Please bear with us while we
-reimplement this feature.
-
-Thank you.
-</div>
-
 <div class="progress" id="shortfall"></div>
 
 |                                               | USD                                                     |
