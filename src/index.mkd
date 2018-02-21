@@ -1,6 +1,5 @@
 [openbox]:    <http://openbox.org/wiki/Main_Page>
 [debian]:     <https://www.debian.org>
-[bunsenintro]:<http://crunchbang.org/forums/viewtopic.php?id=39049>
 [cb]:         <http://crunchbang.org/forums/viewtopic.php?id=38916>
 [releaseurl]: <@@RELEASE_ANNOUNCEMENT_URL@@>
 [censuslink]: <https://wiki.debian.org/Derivatives/Census/BunsenLabs>
@@ -8,8 +7,8 @@
 BunsenLabs Linux is a distribution offering a light-weight and easily
 customizable Openbox desktop. The current release is
 **\@\@RELEASE\_CODENAME\@\@**[^1], [derived][censuslink] from Debian
-Jessie. The project is a [community continuation][bunsenintro] of
-CrunchBang Linux.
+Jessie. The project is a community continuation of
+[CrunchBang Linux](https://en.wikipedia.org/wiki/CrunchBang_Linux).
 
 [^1]: Released on \@\@RELEASE\_DATE\@\@. Read the announcement
 [here][releaseurl]. This is a refresh of the earlier **Hydrogen**
