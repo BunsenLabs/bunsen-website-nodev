@@ -1,6 +1,6 @@
 /*
   bl-repo-index -- package index generator for Debian APT repositories
-  Copyright (C) 2015-2017 Jens John <dev@2ion.de>
+  Copyright (C) 2015-2018 Jens John <dev@2ion.de>
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
