@@ -73,16 +73,6 @@ following [contents][AptSourcesBp]:
 deb http://pkg.bunsenlabs.org/debian stretch-backports main
 ~~~
 
-### unstable
-
-This repository contains some packages built for Debian testing and
-unstable and is not part of BunsenLabs. See the package list
-[here](https://pkg.bunsenlabs.org/repoidx.html#unstable).
-
-~~~
-deb http://pkg.bunsenlabs.org/debian unstable main
-~~~
-
 ## Mirrors
 
 We currently operate two repository mirrors. If you specify the host
