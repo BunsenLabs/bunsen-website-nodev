@@ -22,56 +22,14 @@
 To use our repositories, follow the instructions below: Set up the APT
 configuration and import our signing key.
 
-### bunsen-hydrogen
+Add any applicable source entries to `/etc/apt/sources.list.d/bunsen.list`:
 
-This is our main repository which contains our core packages.
-
-Set up a file at `/etc/apt/sources.list.d/bunsen.list` with the
-following [contents][AptSources]:
-
-~~~
-deb http://pkg.bunsenlabs.org/debian bunsen-hydrogen main
-~~~
-
-### jessie-backports
-
-This is an auxiliary repository containing packages backported from
-Debian testing and imported from Ubuntu.
-
-Set up `/etc/apt/sources.list.d/bunsen-jessie-backports.list` with the
-following [contents][AptSourcesBp]:
-
-~~~
-deb http://pkg.bunsenlabs.org/debian jessie-backports main
-~~~
-
-The backports repo's packages will have a pin priority of 100, so
-regular jessie packages will continue to take precedence until you
-explicitly install a backported package.
-
-To upgrade a package to its backports version, target the backports
-distribution as follows:
-
-~~~ { .bash }
-sudo apt-get -t jessie-backports install ${PACKAGE_NAME}
-~~~
-
-Subsequent package upgrades will be installed from the backports repo or
-the regular repository, whichever package version is
-higher.
-
-### stretch-backports
-
-This is an auxiliary repository containing packages backported from
-Debian Testing and Unstable. It should be used only with BL Helium or
-Debian Stretch.
-
-Set up `/etc/apt/sources.list.d/bunsen-stretch-backports.list` with the
-following [contents][AptSourcesBp]:
-
-~~~
-deb http://pkg.bunsenlabs.org/debian stretch-backports main
-~~~
+|Supported release(s)| Repository | sources.list entry | Package index |
+|:-------------------|:-----------|:-------------------|:-------------:|
+| Helium             |  helium     | `deb http://pkg.bunsenlabs.org/debian helium main` | [⬛](https://www.bunsenlabs.org/repoidx.html#helium) |
+| Helium             |stretch-backports     | `deb http://pkg.bunsenlabs.org/debian stretch-backports main` | [⬛](https://www.bunsenlabs.org/repoidx.html#stretch-backports) |
+| Hydrogen, Deuterium | bunsen-hydrogen     | `deb http://pkg.bunsenlabs.org/debian bunsen-hydrogen main` | [⬛](https://www.bunsenlabs.org/repoidx.html#bunsen-hydrogen) |
+| Hydrogen, Deuterium | jessie-backports     | `deb http://pkg.bunsenlabs.org/debian jessie-backports main` | [⬛](https://www.bunsenlabs.org/repoidx.html#jessie-backports) |
 
 ## Mirrors
 
