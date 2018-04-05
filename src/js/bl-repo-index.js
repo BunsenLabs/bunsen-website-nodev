@@ -35,7 +35,6 @@ const BLDIST = {
     "https://eu.pkg.bunsenlabs.org/debian/dists/helium/main/binary-amd64/Packages",
     "https://eu.pkg.bunsenlabs.org/debian/dists/helium/main/binary-i386/Packages",
     "https://eu.pkg.bunsenlabs.org/debian/dists/helium/main/binary-armhf/Packages"],
-  ]
 };
 
 var DIST_TOC_ENTRIES = {};            /* Global ToC DOM nodes */
