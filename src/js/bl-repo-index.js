@@ -27,16 +27,14 @@ const BLDIST = {
     "https://eu.pkg.bunsenlabs.org/debian/dists/jessie-backports/main/binary-amd64/Packages",
     "https://eu.pkg.bunsenlabs.org/debian/dists/jessie-backports/main/binary-i386/Packages",
     "https://eu.pkg.bunsenlabs.org/debian/dists/jessie-backports/main/binary-armhf/Packages"],
-  unstable: [
-    "https://eu.pkg.bunsenlabs.org/debian/dists/unstable/main/binary-amd64/Packages",
-    "https://eu.pkg.bunsenlabs.org/debian/dists/unstable/main/binary-i386/Packages"],
   stretch_backports: [
     "https://eu.pkg.bunsenlabs.org/debian/dists/stretch-backports/main/binary-amd64/Packages",
     "https://eu.pkg.bunsenlabs.org/debian/dists/stretch-backports/main/binary-i386/Packages"
   ],
   helium: [
-    "https://kelaino.bunsenlabs.org/~johnraff/debian/dists/helium/main/binary-amd64/Packages",
-    "https://kelaino.bunsenlabs.org/~johnraff/debian/dists/helium/main/binary-i386/Packages"
+    "https://eu.pkg.bunsenlabs.org/debian/dists/helium/main/binary-amd64/Packages",
+    "https://eu.pkg.bunsenlabs.org/debian/dists/helium/main/binary-i386/Packages",
+    "https://eu.pkg.bunsenlabs.org/debian/dists/helium/main/binary-armhf/Packages"],
   ]
 };
 
