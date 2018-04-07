@@ -126,6 +126,13 @@ const Layout = class {
       for (const [k,v] of Object.entries(attr)) {
         e.setAttribute(k, v);
       }
+      // Fuck JS.
+      if ("onclick" in attr) {
+        e.onclick = attr.onclick;
+      }
+      if ("onmouseover" in attr) {
+        e.onmouseover = attr.onmouseover;
+      }
     }
 
     if (chld) {
@@ -254,7 +261,7 @@ function parse_Packages(Packages, distro) {
  * @param distro Name of the distro, passed through to resolve()
  * @return Promise
  */
-function fetch(url, distro) {
+function fetch_distro(url, distro) {
   return new Promise(
       function(resolve, reject) {
         let r = new XMLHttpRequest();
@@ -407,7 +414,10 @@ function render_distro(p, distro, m) {
   const nav = Layout.div({ class: "toc" }, [
     Layout.ul(null, pkeys.map(k => {
       const pkg = m.get(k);
-      return Layout.li(null, null, [
+      return Layout.li(null, {
+          onclick: () => { window.location = `#${distname}-${pkg.name}`; },
+          onmouseover: (e) => { e.target.style.cursor = "pointer"; },
+        }, [
         Layout.a(pkg.name, { href: `#${distname}-${pkg.name}`}),
         Layout.span(pkg.version, { class: "pkg-version" })
       ]);
@@ -541,7 +551,7 @@ function main(node) {
   /* Fetch & render */
   distro_keys.forEach(function (distro) {
     let promises = BLDIST[distro].map((url) => {
-      return fetch(url, distro);
+      return fetch_distro(url, distro);
     });
 
     Promise.all(promises).then(
