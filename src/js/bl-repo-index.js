@@ -416,13 +416,16 @@ function render_distro(p, distro, m) {
     akeys.sort();
     akeys.forEach(function (arch) {
       let tr = document.createElement("tr");
+      tr.onclick = () => {
+        window.location = pkg.arch[arch].url;
+      };
+      tr.onmouseover = () => {
+        tr.style.cursor = "pointer";
+      };
 
       let td = document.createElement("td");
       td.setAttribute("align", "left");
-      let a = document.createElement("a");
-      a.setAttribute("href", pkg.arch[arch].url);
-      a.textContent = arch;
-      td.appendChild(a);
+      td.textContent = arch;
       tr.appendChild(td);
 
       td = document.createElement("td");
