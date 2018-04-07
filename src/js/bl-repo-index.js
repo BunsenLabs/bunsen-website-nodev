@@ -37,13 +37,67 @@ const BLDIST = {
     "https://eu.pkg.bunsenlabs.org/debian/dists/helium/main/binary-armhf/Packages"],
 };
 
-var DIST_TOC_ENTRIES = {};            /* Global ToC DOM nodes */
-var DIST_MOD_DATE = {};               /* Modification dates for each distro's Packages file(s) */
-var DIST_PKG_CHANGE_PROMISES = [];    /* Promises for the asynchronous retrieveal of the individual
+const DIST_TOC_ENTRIES = {};            /* Global ToC DOM nodes */
+const DIST_MOD_DATE = {};               /* Modification dates for each distro's Packages file(s) */
+const DIST_PKG_CHANGE_PROMISES = [];    /* Promises for the asynchronous retrieveal of the individual
                                          package's Last-Modified HTTP headers via HEAD requests; there
                                          is no distinction by distro. */
-var DIST_BASE_URLS = {};
-var DIST_ALL_PKGS = {};
+const DIST_BASE_URLS = {};
+const DIST_ALL_PKGS = {};
+
+const Layout = class {
+
+  static td (text, attr, children) {
+    return Layout.generic_text("td", text, attr || { align: "left" }, children);
+  }
+
+  static tr (attr, children) {
+    return Layout.generic("tr", attr, children);
+  }
+
+  static th (text, attr, children) {
+    return Layout.generic_text("td", text, attr || {align:"left"}, children);
+  }
+
+  static tbody (attr, children) {
+    return Layout.generic("tbody", attr, children);
+  }
+
+  static thead (attr, children) {
+    return Layout.generic("thead", attr, children);
+  }
+
+  static table (attr, children) {
+    return Layout.generic("table", attr, children);
+  }
+
+  static generic_text (name, text, attributes, children) {
+    const e = Layout.generic(name, attributes, children);
+    e.textContent = text;
+    return e;
+  }
+
+  static generic (name, attributes, children) {
+    const attr = attributes || null;
+    const chld = children || null;
+
+    const e = document.createElement(name);
+
+    if (attr) {
+      for (const [k,v] of Object.entries(attr)) {
+        e.setAttribute(k, v);
+      }
+    }
+
+    if (chld) {
+      children.forEach(c => {
+        e.appendChild(c);
+      });
+    }
+
+    return e;
+  }
+};
 
 /* Uppercase the first letter of a string. */
 String.prototype.cfl = function() {
@@ -389,54 +443,27 @@ function render_distro(p, distro, m) {
         });
     p.appendChild(ul);
 
-    let table = document.createElement("table");
+    const table = Layout.table(null, [
+      Layout.thead(null, [
+        Layout.tr({ class: "header" }, [
+          Layout.th("Architecture"),
+          Layout.th("Size"),
+          Layout.th("SHA-1")
+        ])
+      ])
+    ]);
 
-    let thead = document.createElement("thead");
-    let tr = document.createElement("tr");
-    tr.setAttribute("class", "header");
-    let th = document.createElement("th");
-    th.setAttribute("align", "left");
-    th.textContent = "Architecture";
-    tr.appendChild(th);
-    th = document.createElement("th");
-    th.setAttribute("align", "left");
-    th.textContent = "Size";
-    tr.appendChild(th);
-    th = document.createElement("th");
-    th.setAttribute("align", "left");
-    th.textContent = "SHA-1"
-    tr.appendChild(th);
-    thead.appendChild(tr);
-    table.appendChild(thead);
+    const tbody = Layout.tbody();
 
-    let tbody = document.createElement("tbody");
-    let akeys = []; 
-    for(let arch in pkg.arch)
-      akeys.push(arch);
-    akeys.sort();
-    akeys.forEach(function (arch) {
-      let tr = document.createElement("tr");
-      tr.onclick = () => {
-        window.location = pkg.arch[arch].url;
-      };
-      tr.onmouseover = () => {
-        tr.style.cursor = "pointer";
-      };
+    Object.keys(pkg.arch).sort().forEach(arch => {
+      const tr = Layout.tr(null, [
+        Layout.td(arch),
+        Layout.td(Math.ceil(parseFloat(pkg.arch[arch].size)/1024) + " kB"),
+        Layout.td(pkg.arch[arch].sha1)
+      ]);
 
-      let td = document.createElement("td");
-      td.setAttribute("align", "left");
-      td.textContent = arch;
-      tr.appendChild(td);
-
-      td = document.createElement("td");
-      td.setAttribute("align", "left");
-      td.textContent = Math.ceil(parseFloat(pkg.arch[arch].size)/1024) + " kB";
-      tr.appendChild(td);
-
-      td = document.createElement("td");
-      td.setAttribute("align", "left");
-      td.textContent = pkg.arch[arch].sha1;
-      tr.appendChild(td);
+      tr.onclick = () => { window.location = pkg.arch[arch].url; };
+      tr.onmouseover = () => { tr.style.cursor = "pointer"; };
 
       tbody.appendChild(tr);
 
