@@ -46,6 +46,45 @@ const DIST_BASE_URLS = {};
 const DIST_ALL_PKGS = {};
 
 const Layout = class {
+  static ul (attr, children) {
+    return Layout.generic("ul", attr, children);
+  }
+
+  static li (text, attr, children) {
+    if (text)
+        return Layout.generic_text("li", text, attr, children);
+    else
+        return Layout.generic("li", attr, children);
+  }
+
+  static div (attr, children) {
+    return Layout.generic("div", attr, children);
+  }
+
+  static a (text, attr, children) {
+    if (text)
+      return Layout.generic_text("a", text, attr, children);
+    else
+      return Layout.generic("a", attr, children);
+  }
+
+  static h2 (text, attr, children) {
+    if (text)
+      return Layout.generic_text("h2", text, attr, children);
+    else
+      return Layout.generic("h2", attr, children);
+  }
+
+  static h3 (text, attr, children) {
+    if (text)
+      return Layout.generic_text("h3", text, attr, children);
+    else
+      return Layout.generic("h3", attr, children);
+  }
+
+  static span (text, attr, children) {
+    return Layout.generic_text("span", text, attr, children);
+  }
 
   static td (text, attr, children) {
     return Layout.generic_text("td", text, attr || { align: "left" }, children);
@@ -328,13 +367,13 @@ function link_debian_packages(str, node) {
       for(let j = 0; j < subpkgs.length; j++) {
         process_package_str(subpkgs[j].trim());
         if(j < (subpkgs.length-1))
-          node.appendChild(create_sep_span(" | "));
+          node.appendChild(Layout.span(" | "));
       }
     } else 
       process_package_str(pkgstr);
 
     if(i < (pkgs.length-1))
-      node.appendChild(create_sep_span(", "));
+      node.appendChild(Layout.span(", "));
   }
 }
 
@@ -345,66 +384,47 @@ function link_debian_packages(str, node) {
  * @return Nothing
  */
 function render_distro(p, distro, m) {
-  let distname = distro.replace("_", "-");
-  let h2 = document.createElement("h2");
-  h2.textContent = distname;
-  h2.setAttribute("id", h2.textContent);
-  /*
-  let h2span = document.createElement("span");
-  h2span.setAttribute("class", "distro-modification-date");
-  h2span.textContent = "Last update: " + DIST_MOD_DATE[distro].toLocaleDateString();
-  h2.appendChild(h2span);
-  */
+  const distname = distro.replace("_", "-");
+
+  const h2 = Layout.h2(distname, { id: distname });
   p.appendChild(h2);
 
   /* Sorted output */
-  let pkeys = [];
+  const pkeys = [];
   for(let k of m.keys())
     pkeys.push(k);
   pkeys.sort();
 
   /* Package number in global ToC */
-  let tocli = DIST_TOC_ENTRIES[distro];
-  if(tocli!=null) {
-    let span = document.createElement("span");
-    span.setAttribute("class", "pkg-count");
-    span.textContent = `${pkeys.length} package${pkeys.length==1?"":"s"}, last updated on ${DIST_MOD_DATE[distro].toLocaleDateString()}`;
-    tocli.appendChild(span);
+  const tocli = DIST_TOC_ENTRIES[distro];
+  if (tocli) {
+    tocli.appendChild(
+      Layout.span(`${pkeys.length} package${pkeys.length==1?"":"s"}, last updated on ${DIST_MOD_DATE[distro].toLocaleDateString()}`,
+        { class: "pkg-count" }));
   }
 
   /* Table of Contents */
-  let nav = document.createElement("div");
-  nav.setAttribute("class", "toc");
-  let navul = document.createElement("ul");
-  pkeys.forEach(function (k) {
-    let li = document.createElement("li");
-    let a = document.createElement("a");
-    let pkg = m.get(k);
-    a.setAttribute("href", "#"+h2.textContent+"-"+pkg.name);
-    a.textContent = pkg.name;
-    let span = document.createElement("span");
-    span.setAttribute("class", "pkg-version");
-    span.textContent = pkg.version;
-    li.appendChild(a);
-    li.appendChild(span);
-    navul.appendChild(li);
-  });
-  nav.appendChild(navul);
+  const nav = Layout.div({ class: "toc" }, [
+    Layout.ul(null, pkeys.map(k => {
+      const pkg = m.get(k);
+      return Layout.li(null, null, [
+        Layout.a(pkg.name, { href: `#${distname}-${pkg.name}`}),
+        Layout.span(pkg.version, { class: "pkg-version" })
+      ]);
+    }))
+  ]);
   p.appendChild(nav);
 
-  pkeys.forEach(function (k) {
+  pkeys.forEach(k => {
     let pkg = m.get(k);
     let pkgmodnode = null;
 
-    let h3 = document.createElement("h3");
-    h3.setAttribute("id", h2.textContent +"-"+pkg.name);
-    let a = document.createElement("a");
-    a.setAttribute("href", "#" + h2.textContent +"-"+pkg.name);
-    a.textContent = pkg.name;
-    h3.appendChild(a);
-    p.appendChild(h3);
+    const h3 = Layout.h3(null, { id: `${distname}-${pkg.name}` }, [
+      Layout.a(pkg.name, { href: `#${distname}-${pkg.name}`})
+    ]);
+    p.appendChild(h3); // FIXME: Remove reference further down
 
-    let ul = document.createElement("ul");
+    const ul = Layout.ul();
     ["version", "description", "depends", "recommends", "suggests", "maintainer", "homepage", "source"].forEach(
         function (f) {
           if(!pkg[f]) return; /* empty field, may happen in $depends */
