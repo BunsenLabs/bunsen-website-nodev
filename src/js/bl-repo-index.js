@@ -253,62 +253,18 @@ function parse_Packages(Packages, distro) {
 
   packages = apply_filter(packages);
 
-  return [packages, distro];
-};
-
-/* Fetches a Packages file from the internet
- * @param url URL of the Packages file
- * @param distro Name of the distro, passed through to resolve()
- * @return Promise
- */
-function fetch_distro(url, distro) {
-  return new Promise(
-      function(resolve, reject) {
-        let r = new XMLHttpRequest();
-        r.open('GET', url);
-        r.responseType = 'text';
-        r.onload = function() {
-          switch(r.status) {
-            case 200:
-              /* FIXME: So ugly. */
-              DIST_MOD_DATE[distro] = new Date(r.getResponseHeader("Last-Modified"));
-              resolve(parse_Packages(r.response, distro));
-              return;
-            default:
-              reject(Error("Failed to fetch package file: " + url));
-          }
-        };
-        r.onerror = function() {
-          reject(Error("Request failed: " + url));
-        };
-        r.send();
-      }
-    );
+  return packages;
 };
 
 function fetch_change_date_for_package(url, dom_node) {
-  return new Promise(
-      function (resolve, reject) {
-        let rf = function (date, node) {
-          return [date, node];
-        };
-        let r = new XMLHttpRequest();
-        r.open('HEAD', url);
-        r.onload = function () {
-          switch(r.status) {
-            case 200:
-              dom_node.textContent = " (" + new Date(r.getResponseHeader("Last-Modified")).toLocaleDateString() + ")";
-              resolve(dom_node.textContent);
-              return;
-            default:
-              reject(Error("Failed to fetch HEAD of file: " + url));
-          }
-        };
-        r.onerror = function () {
-          reject(Error("Request failed: " + url));
-        };
-        r.send();
-      });
+  const request = new Request(url, { method: "HEAD" });
+  return fetch(request)
+          .then(response => {
+            if (!response.ok)
+              throw Error(response.statusText);
+            const datestr = new Date(response.headers.get("Last-Modified")).toLocaleDateString();
+            dom_node.textContent = ` (${datestr})`;
+          });
 };
 
 /* Summarizes packages available in more than one architecture under a
@@ -539,31 +495,29 @@ function main(node) {
 
   render_main_toc();
 
-  /* Always list distros in alphabetical order */
-  let distro_keys = Object.keys(BLDIST);
-  distro_keys.sort();
-
-  distro_keys.forEach((distro) => {
-    let url = BLDIST[distro][0];
-    DIST_BASE_URLS[distro] = url.slice(0, url.search("/debian/") + "/debian/".length);
-  });
+  const distro_keys = Object.keys(BLDIST).sort();
 
   /* Fetch & render */
-  distro_keys.forEach(function (distro) {
-    let promises = BLDIST[distro].map((url) => {
-      return fetch_distro(url, distro);
+  distro_keys.forEach(distro => {
+    const url = BLDIST[distro][0];
+    DIST_BASE_URLS[distro] = url.slice(0, url.search("/debian/") + "/debian/".length);
+    const promises = BLDIST[distro].map(url => {
+      return fetch(url)
+              .then(response => {
+                if(!response.ok)
+                  throw Error(response.statusText);
+                DIST_MOD_DATE[distro] = new Date(response.headers.get("Last-Modified"));
+                return response.text();
+              })
+              .then(text => {
+                return parse_Packages(text, distro);
+              });
     });
-
-    Promise.all(promises).then(
-      function (r) {
-        let distro = r[0][1];
-        let pmaps = [];
-        r.forEach(function (e) {
-          pmaps.push(e[0]);
-        });
-        let um = unify_package_maps(pmaps);
-        render_distro(p, distro, um);
-    });
+    Promise.all(promises)
+      .then(package_maps => {
+        const unified_package_map = unify_package_maps(package_maps);
+        render_distro(p, distro, unified_package_map);
+      });
   });
 
   render_package_mod_dates();
