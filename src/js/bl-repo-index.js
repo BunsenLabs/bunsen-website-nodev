@@ -474,20 +474,18 @@ function render_distro(p, distro, m) {
 
 /* Adds the list of distros to the DOM */
 function render_main_toc() {
-  let anchor = document.querySelector(".toc ul li");
+  const anchor = document.querySelector(".toc ul li");
   if(anchor === null) return;
-  let ul = document.createElement("ul");
-  for(let distro in BLDIST) {
-    let li = document.createElement("li");
-    let a = document.createElement("a");
-    let d = distro.replace("_", "-");
-    a.setAttribute("href", "#" + d);
-    a.textContent = d;
-    li.appendChild(a);
-    ul.appendChild(li);
-    DIST_TOC_ENTRIES[distro] = li;
-  }
-  anchor.appendChild(ul);
+  anchor.appendChild(Layout.ul(null,
+    Object.keys(BLDIST).sort().map(distro => {
+      const distname = distro.replace("_", "-");
+      const li = Layout.li(null, null, [
+        Layout.a(distname, { id: `#${distname}` })
+      ]);
+      DIST_TOC_ENTRIES[distro] = li;
+      return li;
+    })
+  ));
 }
 
 function render_package_mod_dates() {
