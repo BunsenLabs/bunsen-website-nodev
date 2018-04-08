@@ -480,7 +480,7 @@ function render_main_toc() {
     Object.keys(BLDIST).sort().map(distro => {
       const distname = distro.replace("_", "-");
       const li = Layout.li(null, null, [
-        Layout.a(distname, { id: `#${distname}` })
+        Layout.a(distname, { href: `#${distname}` })
       ]);
       DIST_TOC_ENTRIES[distro] = li;
       return li;
