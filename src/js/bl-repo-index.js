@@ -340,6 +340,16 @@ function link_debian_packages(str, node) {
   }
 }
 
+function render_distro_anchor(p, distro) {
+  const distname = distro.replace("_", "-");
+  const anchor =  Layout.div({
+    id: `#container-for-${distname}`,
+    class: "distro-container"
+  });
+  p.appendChild(anchor);
+  return anchor;
+}
+
 /* Put distro information into the DOM.
  * @param p DOM node to append the content to
  * @param distro Name of the distro
@@ -498,7 +508,9 @@ function main(node) {
   const distro_keys = Object.keys(BLDIST).sort();
 
   /* Fetch & render */
-  distro_keys.forEach(distro => {
+  Object.keys(BLDIST).sort().forEach(distro => {
+    // Must not happen async to make the render order stable
+    const distro_anchor = render_distro_anchor(p, distro);
     const url = BLDIST[distro][0];
     DIST_BASE_URLS[distro] = url.slice(0, url.search("/debian/") + "/debian/".length);
     const promises = BLDIST[distro].map(url => {
@@ -516,7 +528,7 @@ function main(node) {
     Promise.all(promises)
       .then(package_maps => {
         const unified_package_map = unify_package_maps(package_maps);
-        render_distro(p, distro, unified_package_map);
+        render_distro(distro_anchor, distro, unified_package_map);
       });
   });
 
