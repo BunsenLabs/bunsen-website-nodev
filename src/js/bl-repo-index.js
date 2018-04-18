@@ -19,19 +19,19 @@
 'use strict';
 
 const BLDIST = {
-  bunsen_hydrogen: [
+  "bunsen-hydrogen": [
     "https://eu.pkg.bunsenlabs.org/debian/dists/bunsen-hydrogen/main/binary-amd64/Packages",
     "https://eu.pkg.bunsenlabs.org/debian/dists/bunsen-hydrogen/main/binary-i386/Packages",
     "https://eu.pkg.bunsenlabs.org/debian/dists/bunsen-hydrogen/main/binary-armhf/Packages"],
-  jessie_backports: [
+  "jessie-backports": [
     "https://eu.pkg.bunsenlabs.org/debian/dists/jessie-backports/main/binary-amd64/Packages",
     "https://eu.pkg.bunsenlabs.org/debian/dists/jessie-backports/main/binary-i386/Packages",
     "https://eu.pkg.bunsenlabs.org/debian/dists/jessie-backports/main/binary-armhf/Packages"],
-  stretch_backports: [
+  "stretch-backports": [
     "https://eu.pkg.bunsenlabs.org/debian/dists/stretch-backports/main/binary-amd64/Packages",
     "https://eu.pkg.bunsenlabs.org/debian/dists/stretch-backports/main/binary-i386/Packages"
   ],
-  helium: [
+  "helium": [
     "https://eu.pkg.bunsenlabs.org/debian/dists/helium/main/binary-amd64/Packages",
     "https://eu.pkg.bunsenlabs.org/debian/dists/helium/main/binary-i386/Packages",
     "https://eu.pkg.bunsenlabs.org/debian/dists/helium/main/binary-armhf/Packages"],
@@ -341,9 +341,8 @@ function link_debian_packages(str, node) {
 }
 
 function render_distro_anchor(p, distro) {
-  const distname = distro.replace("_", "-");
   const anchor =  Layout.div({
-    id: `#container-for-${distname}`,
+    id: `#container-for-${distro}`,
     class: "distro-container"
   });
   p.appendChild(anchor);
@@ -357,9 +356,7 @@ function render_distro_anchor(p, distro) {
  * @return Nothing
  */
 function render_distro(p, distro, m) {
-  const distname = distro.replace("_", "-");
-
-  const h2 = Layout.h2(distname, { id: distname });
+  const h2 = Layout.h2(distro, { id: distro });
   p.appendChild(h2);
 
   /* Sorted output */
@@ -381,10 +378,10 @@ function render_distro(p, distro, m) {
     Layout.ul(null, pkeys.map(k => {
       const pkg = m.get(k);
       return Layout.li(null, {
-          onclick: () => { window.location = `#${distname}-${pkg.name}`; },
+          onclick: () => { window.location = `#${distro}-${pkg.name}`; },
           onmouseover: (e) => { e.target.style.cursor = "pointer"; },
         }, [
-        Layout.a(pkg.name, { href: `#${distname}-${pkg.name}`}),
+        Layout.a(pkg.name, { href: `#${distro}-${pkg.name}`}),
         Layout.span(pkg.version, { class: "pkg-version" })
       ]);
     }))
@@ -395,8 +392,8 @@ function render_distro(p, distro, m) {
     let pkg = m.get(k);
     let pkgmodnode = null;
 
-    const h3 = Layout.h3(null, { id: `${distname}-${pkg.name}` }, [
-      Layout.a(pkg.name, { href: `#${distname}-${pkg.name}`})
+    const h3 = Layout.h3(null, { id: `${distro}-${pkg.name}` }, [
+      Layout.a(pkg.name, { href: `#${distro}-${pkg.name}`})
     ]);
     p.appendChild(h3); // FIXME: Remove reference further down
 
@@ -478,9 +475,8 @@ function render_main_toc() {
   if(anchor === null) return;
   anchor.appendChild(Layout.ul(null,
     Object.keys(BLDIST).sort().map(distro => {
-      const distname = distro.replace("_", "-");
       const li = Layout.li(null, null, [
-        Layout.a(distname, { href: `#${distname}` })
+        Layout.a(distro, { href: `#${distro}` })
       ]);
       DIST_TOC_ENTRIES[distro] = li;
       return li;
