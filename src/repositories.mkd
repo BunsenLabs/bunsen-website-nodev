@@ -3,19 +3,6 @@
 [AptSourcesBp]: <https://pkg.bunsenlabs.org/templates/etc/apt/sources.list.d/bunsen-jessie-backports.list>
 [DebianTree]: <https://pkg.bunsenlabs.org/debian/>
 
-<form id="package-search" action="/repoidx.html" method="get" style="text-align:center">
-<input id="filter-value" style="width:75%;display:inline;" type="text" autofocus="true" placeholder="Search package…" name="v" minlength="1">
-<select id="filter-key" title="Select the package property to filter by" name="k" style="width:20%;display:inline;">
-  <option value="any">Any metadata field</option>
-  <option value="depends">Depends</option>
-  <option value="maintainer">Maintainer</option>
-  <option value="name-description" selected="selected">Name or Descr</option>
-  <option value="recommends">Recommneds</option>
-  <option value="section">Section</option>
-  <option value="suggests">Suggests</option>
-  <option value="version">Version</option>
-</select>
-</form>
 
 ## Repositories
 
@@ -30,6 +17,22 @@ Add any applicable source entries to `/etc/apt/sources.list.d/bunsen.list`:
 | Helium             |stretch-backports     | `deb http://pkg.bunsenlabs.org/debian stretch-backports main` | [⬛](https://www.bunsenlabs.org/repoidx.html#stretch-backports) |
 | Hydrogen, Deuterium | bunsen-hydrogen     | `deb http://pkg.bunsenlabs.org/debian bunsen-hydrogen main` | [⬛](https://www.bunsenlabs.org/repoidx.html#bunsen-hydrogen) |
 | Hydrogen, Deuterium | jessie-backports     | `deb http://pkg.bunsenlabs.org/debian jessie-backports main` | [⬛](https://www.bunsenlabs.org/repoidx.html#jessie-backports) |
+
+
+
+<form id="package-search" action="/repoidx.html" method="get" style="text-align:center">
+<input id="filter-value" style="width:75%;display:inline;" type="text" autofocus="true" placeholder="Search package…" name="v" minlength="1">
+<select id="filter-key" title="Select the package property to filter by" name="k" style="width:20%;display:inline;">
+  <option value="any">Any metadata field</option>
+  <option value="depends">Depends</option>
+  <option value="maintainer">Maintainer</option>
+  <option value="name-description" selected="selected">Name or Descr</option>
+  <option value="recommends">Recommneds</option>
+  <option value="section">Section</option>
+  <option value="suggests">Suggests</option>
+  <option value="version">Version</option>
+</select>
+</form>
 
 ## Mirrors
 

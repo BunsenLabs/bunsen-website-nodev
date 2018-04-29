@@ -27,7 +27,7 @@ some additions. Hence, the [hardware
 recommendations][HardwareRequirements] from the Debian project apply for
 both 32bit and 64bit systems:
 
-|RAM (minimum)|RAM (recommended)|Hard Drive |
+|RAM (minimum)|RAM (recommended)|Hard Drive (recommended) |
 |:-----------:|:---------------:|:---------:|
 | 256M        | 1G              | 10G       |
 
@@ -71,9 +71,9 @@ signature to verify any download[^3].
 
 | ISO file          | Size                  | .torrent                    | https         | SHA-256          | PGP .sig        |
 |:------------------|:---------------------:|:--------------------------:|:--------------:|:----------------:|:----------------:|
-| \@\@ISO\_64\@\@   | \@\@ISO\_64\_SIZE\@\@ | [⬛][TorrentFile64]<span title="⬆: Seeders ⬇: Leechers" class="torrent-status" id="7105a3932e1126dc60e8c4c81b3fd9928841e4c5"></span>         | [⬛][DDL64]     | [⬛][shasums64]   | [⬛][pgp64]       |
-| \@\@ISO\_32\@\@   | \@\@ISO\_32\_SIZE\@\@ | [⬛][TorrentFile32]<span title="⬆: Seeders ⬇: Leechers" class="torrent-status" id="2de3c45ac5c997497f81819b25fa114a43984156"></span>        | [⬛][DDL32]     | [⬛][shasums32]   | [⬛][pgp32]       |
-| \@\@ISO\_32CD\@\@ | \@\@ISO\_32CD\_SIZE\@\@ | [⬛][TorrentFile32CD]<span title="⬆: Seeders ⬇: Leechers" class="torrent-status" id="1dd4cd32087f83bf0280122dab56a1fb3a2e0e75"></span>        | [⬛][DDL32CD]     | [⬛][shasums32CD]   | [⬛][pgp32CD]       |
+| \@\@ISO\_64\@\@   | \@\@ISO\_64\_SIZE\@\@ | [⬛][TorrentFile64]<span title="⬆: Seeders ⬇: Leechers" class="torrent-status" id="492ecd62162f4972fe8e078c771c37bcd40d507c"></span>         | [⬛][DDL64]     | [⬛][shasums64]   | [⬛][pgp64]       |
+| \@\@ISO\_32\@\@   | \@\@ISO\_32\_SIZE\@\@ | [⬛][TorrentFile32]<span title="⬆: Seeders ⬇: Leechers" class="torrent-status" id="0894839e6111d8062e39b09a125a83f4ed052c88"></span>        | [⬛][DDL32]     | [⬛][shasums32]   | [⬛][pgp32]       |
+| \@\@ISO\_32CD\@\@ | \@\@ISO\_32CD\_SIZE\@\@ | [⬛][TorrentFile32CD]<span title="⬆: Seeders ⬇: Leechers" class="torrent-status" id="a195e06888e9cc81a01dc16240347889478f036e"></span>        | [⬛][DDL32CD]     | [⬛][shasums32CD]   | [⬛][pgp32CD]       |
 
 There is a [section](https://forums.bunsenlabs.org/viewforum.php?id=14)
 on the forums which deals with any issues, bugs and comments related to
