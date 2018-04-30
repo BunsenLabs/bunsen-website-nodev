@@ -5,10 +5,12 @@
 [censuslink]: <https://wiki.debian.org/Derivatives/Census/BunsenLabs>
 
 BunsenLabs Linux is a distribution offering a light-weight and easily
-customizable Openbox desktop. The current release is
-**\@\@RELEASE\_CODENAME\@\@**, [derived][censuslink] from Debian
-Debian 9.x (Stretch). The project is a community continuation of
+customizable Openbox desktop. The project is a community continuation of
 [CrunchBang Linux](https://en.wikipedia.org/wiki/CrunchBang_Linux).
+
+The current release is **\@\@RELEASE\_CODENAME\@\@**, [derived][censuslink] from Debian 9 (Stretch).
+
+Read the latest release announcement [here][releaseurl].
 
 \@\@GALLERY\@\@
 <noscript>

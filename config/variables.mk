@@ -6,7 +6,7 @@ RELEASE_CODENAME           = Helium
 RELEASE_CODENAME_LOWERCASE = $(shell echo $(RELEASE_CODENAME) | tr '[A-Z]' '[a-z]')
 RELEASE_VERSION            =
 RELEASE_DATE               = May 1st, 2018
-RELEASE_ANNOUNCEMENT_URL   = https://forums.bunsenlabs.org/viewtopic.php?id=3685
+RELEASE_ANNOUNCEMENT_URL   = https://forums.bunsenlabs.org/viewtopic.php?id=4772
 
 DDL_BASE_URL               = https://ddl.bunsenlabs.org/ddl
 ISO_BASE_NAME              = bl-$(RELEASE_CODENAME)$(RELEASE_VERSION)
