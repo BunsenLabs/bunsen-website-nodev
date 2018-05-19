@@ -8,6 +8,12 @@
   * An additional privacy policy for our forums.bunsenlabs.org service
     is available [here](https://forums.bunsenlabs.org/misc.php?action=rules).
 
+## Disclaimer
+
+  * The BunsenLabs project does not assume any responsibility for the
+    content of linked third-party pages or any consequences arising from
+    visiting such linked pages.
+
 ## Legal and licenses
 
 All content on this page, if not otherwise noted, is Copyright © The
