@@ -16,3 +16,5 @@ Kontrollmöglichkeit über diese Websites und übernehmen daher keine
 Verantwortung für den Inhalt der Websites Dritter. Wir behalten uns das
 Recht vor, die auf dieser Website enthaltenen Informationen jederzeit zu
 verändern oder zu aktualisieren. 
+
+See also the [legal and privacy page](/legal.html).
