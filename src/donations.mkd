@@ -14,7 +14,12 @@ Thank you!
 
 ## Paypal
 
+
 <div class="emph center">
+*By choosing to click the below link to the PayPal service, you are
+subject to their [privacy policy](https://www.paypal.com/de/webapps/mpp/ua/privacy-full)
+and [terms of service](https://www.paypal.com/de/webapps/mpp/ua/legalhub-full).*
+
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="TCKVK4VGRWQSG">
@@ -38,6 +43,11 @@ DigitalOcean's hosting service, you can also make use of our referral
 link in order to support our hosting expenses directly:
 
 <div class="emph">
+*By choosing to click the below link to the DigitalOcean service, you
+become subject to their [privacy
+policy](https://www.digitalocean.com/legal/privacy/) and [terms of
+service](https://www.digitalocean.com/legal/terms/).*
+
 <center> [Referral link](https://m.do.co/c/f8d7dfb87c4f) </center>
 </div>
 

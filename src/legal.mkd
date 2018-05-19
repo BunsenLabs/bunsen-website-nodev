@@ -1,3 +1,13 @@
+## Privacy Policy
+
+  * Web server logs with anonymized IPv4 and IPv6 addresses are kept for
+    one day in order to be able to debug any occurring service issues.
+    Logs older than that will be deleted.
+  * No other personal data of yours is stored or relayed to external or
+    third-party services. Exceptions are noted beside any link.
+  * An additional privacy policy for our forums.bunsenlabs.org service
+    is available [here](https://forums.bunsenlabs.org/misc.php?action=rules).
+
 ## Legal and licenses
 
 All content on this page, if not otherwise noted, is Copyright © The
