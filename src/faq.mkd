@@ -24,7 +24,7 @@ Unofficial pages have also sprung up elsewhere:
 
 ## Where is the BL source code?
 
-BunsenLabs is being developed in public, [on Github](https://github.com/BunsenLabs). A commit log summary [is available here](/gitlog.html).
+BunsenLabs is being developed in public, [on Github](https://github.com/BunsenLabs).
 
 ## Who are (and were) the project members?
 
