@@ -2,7 +2,13 @@
 
   * Web server logs with anonymized IPv4 and IPv6 addresses are kept for
     one day in order to be able to debug any occurring service issues.
-    Logs older than that will be deleted.
+    Logs older than that will be deleted. This concerns the following
+    domains:
+      * asia.pkg.bunsenlabs.org
+      * bunsenlabs.org
+      * eu.pkg.bunsenlabs.org
+      * pkg.bunsenlabs.org
+      * www.bunsenlabs.org
   * No other personal data of yours is stored or relayed to external or
     third-party services. Exceptions are noted beside any link.
   * An additional privacy policy for our forums.bunsenlabs.org service
