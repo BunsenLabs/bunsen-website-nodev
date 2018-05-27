@@ -22,7 +22,7 @@
 
 ## System requirements
 
-BunsenLabs is a Debian Jessie desktop with custom configurations and
+BunsenLabs is a Debian Stretch desktop with custom configurations and
 some additions. Hence, the [hardware
 recommendations][HardwareRequirements] from the Debian project apply for
 both 32bit and 64bit systems:
