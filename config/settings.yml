@@ -1,6 +1,9 @@
 ---
 gallery:
   - author: BunsenLabs
+    base: Helium_Beam
+    source: https://github.com/BunsenLabs/bunsen-utilities/blob/helium/blob/Helium_Beam.jpg
+  - author: BunsenLabs
     base: hydrogen2
     source: https://www.bunsenlabs.org
   - author: glenn
