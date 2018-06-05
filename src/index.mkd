@@ -68,6 +68,9 @@ There are a few independent communities, see [here for a list](https://www.bunse
 
 ## In the press
 
+There is a long [forum thread](https://forums.bunsenlabs.org/viewtopic.php?id=763) for collecting quality reviews.
+
+* 2018-04-26: Report Hot Café, *[無料OS『BunsenLabs Linux』軽い…256MBでオフィスソフトも可！](https://report.hot-cafe.net/bunsenlabs-linux-4951)
 * 2017-07-25: PC-Welt, *[Openbox/Bunsenlabs vorgestellt: Desktop für Puristen](https://www.pcwelt.de/a/openbox-bunsenlabs-vorgestellt-desktop-fuer-puristen,3447522)*
 * 2017-04-28: ghacks.net, *[A look at Desktop Environments: Openbox Window Manager](https://www.ghacks.net/2017/04/28/a-look-at-desktop-environments-openbox-window-manager/)*
 * 2017-03-28: Video review in Portuguese: *[BunsenLabs Linux - Apresentação e Configurações iniciais](https://www.youtube.com/watch?v=HoNKPopVpbw)*
@@ -85,4 +88,3 @@ There are a few independent communities, see [here for a list](https://www.bunse
 * 2015-09-21: DistroWatch Weekly, Issue 628: *[New Linux distributions](http://distrowatch.com/weekly.php?issue=20150921#waiting)*
 * 2015-06-21: entornos GNU/Linux: *[Un pasno por BunsenLabs GNU/Linux 8.1 (Hydrogen)](http://entornosgnulinux.com/2015/06/21/un-paseo-por-bunsenlabs-gnulinux-8-1-hydrogen/)*
 
-There is a [forum thread](https://forums.bunsenlabs.org/viewtopic.php?id=763) for collecting quality reviews -- if you have a link to add, please submit a post!
