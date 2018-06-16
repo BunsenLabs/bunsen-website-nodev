@@ -118,5 +118,4 @@ It is also possible to include the BunsenLabs system into a minimal
 [netinstall](https://www.debian.org/CD/netinst/) Debian installation
 using a special script. Please consult its
 [README](https://github.com/BunsenLabs/bunsen-netinstall) for detailed
-instructions. There is also a [forum thread](http://crunchbang.org/forums/viewtopic.php?id=39656)
-on this topic.
+instructions.
