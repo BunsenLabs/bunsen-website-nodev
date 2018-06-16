@@ -34,11 +34,10 @@ base system is administrated.
   pre-installed to offer a better "out-of-the-box" experience.
 
 There is no limit to customization: You can review desktop
-configurations in our forums' [Artwork &
-Screenshots](https://forums.bunsenlabs.org/viewforum.php?id=8) section,
-and we also host [several active
-threads](https://forums.bunsenlabs.org/viewforum.php?id=9) on conky
-configuration.
+configurations in our forums' [Artwork & Screenshots](https://forums.bunsenlabs.org/viewforum.php?id=8) section,
+and we also host [several active threads](https://forums.bunsenlabs.org/viewforum.php?id=9) on conky
+configuration. As an example, here's an user-contributed [walkthrough video](https://youtu.be/TUXohePdiR4) showing
+what kind and style of desktop experience you may end up with.
 
 ## Architectures
 
