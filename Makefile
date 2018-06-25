@@ -139,8 +139,9 @@ variables: src/installation.html src/index.html src/news.html
 
 src/index.html: src/index.mkd $(TEMPLATE) $(wildcard include/index/*.html) $(FAVICON_HEADER) $(GALLERY_HEADER) $(GALLERY_NOSCRIPT_HEADER)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
-	@pandoc $(ARGV) $(PANDOC_VARS) \
+	@pandoc $(filter-out --toc,$(ARGV)) $(PANDOC_VARS) \
 		-H include/index/header.html \
+		-B include/index/leader.html \
 		-A include/index/after.html \
 		-o $@ $<
 	@./libexec/postproc $@

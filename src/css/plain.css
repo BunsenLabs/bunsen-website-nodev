@@ -139,6 +139,64 @@ body {
   margin:auto;
 }
 
+div.row {
+  display: flex;
+  flex-direction: row;
+
+}
+
+div.row > a {
+  flex: auto;
+}
+
+a.button, a.button:visited, a.button:hover {
+  border: 1px solid #272822;
+  border-radius: 20px;
+  padding: 8px;
+  text-decoration:none;
+  max-width: 250px;
+}
+
+.leader {
+  padding:3ex 0 3ex 0;
+  background-color: #f6f6f6;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  color: #272822;
+  font-size: 2ex;
+  font-family: "Roboto";
+}
+
+.leader p {
+  line-height: 1.5;
+}
+
+.leader a, .leader a:visited {
+  text-decoration:none;
+  color:#272822;
+}
+
+a.button:hover {
+  background-color: #f6b620;
+  color: #272822;
+}
+
+span.indexheader {
+  font-family: "Open Sans Light";
+  padding-bottom: 8px;
+  font-size: 50px;
+  flex:auto;
+}
+
+span.fade {
+  color: #272822;
+}
+
+
+div.column {
+  flex: auto;
+}
+
 nav > .content-wrapper, footer > .content-wrapper {
   text-align:center;
 }

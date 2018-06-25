@@ -4,19 +4,6 @@
 [releaseurl]: <@@RELEASE_ANNOUNCEMENT_URL@@>
 [censuslink]: <https://wiki.debian.org/Derivatives/Census/BunsenLabs>
 
-BunsenLabs Linux is a distribution offering a light-weight and easily
-customizable Openbox desktop. The project is a community continuation of
-[CrunchBang Linux](https://en.wikipedia.org/wiki/CrunchBang_Linux).
-
-The current release is **\@\@RELEASE\_CODENAME\@\@**, [derived][censuslink] from Debian 9 (Stretch).
-
-Read the latest release announcement [here][releaseurl].
-
-\@\@GALLERY\@\@
-<noscript>
-\@\@GALLERY\_NOSCRIPT\@\@
-</noscript>
-
 ## Defining features
 
 The distribution consists of configuration and resource packages
@@ -39,6 +26,10 @@ and we also host [several active threads](https://forums.bunsenlabs.org/viewforu
 configuration. As an example, here's an user-contributed [walkthrough video](https://youtu.be/TUXohePdiR4) showing
 what kind and style of desktop experience you may end up with.
 
+<div class="row">
+
+<div class="column">
+
 ## Architectures
 
 We offer combined [live-CD and installation
@@ -50,6 +41,10 @@ Our repository currently provides **[armhf](https://wiki.debian.org/ArmHardFloat
 If you would like to see [another Debian ARM port](https://www.debian.org/ports/arm/) supported,
 file a request [here](https://forums.bunsenlabs.org/viewforum.php?id=13).
 
+</div>
+
+<div class="column">
+
 ## Community support
 
 In general, we recommend new users to [visit and sign up for  our
@@ -59,6 +54,10 @@ distribution, and is the main platform for user-to-user support as well
 as the place to voice suggestions and report bugs.
 
 There are a few independent communities, see [here for a list](https://www.bunsenlabs.org/faq.html#independent-channels).
+
+</div>
+
+</div>
 
 ## FAQ and How to get started
 
