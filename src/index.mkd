@@ -42,7 +42,7 @@ what kind and style of desktop experience you may end up with.
 ## Architectures
 
 We offer combined [live-CD and installation
-media](/installation.html#live-cddvdusb-key-method) for the Debian
+media](/installation.html#installing-from-a-live-iso-image-cddvdusb-key) for the Debian
 **i386** (i686) and **amd64** (x86-64) architectures.
 
 However, you can install our [packages](/installation.html#package-based-install) also on ARM platforms.

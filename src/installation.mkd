@@ -36,7 +36,7 @@ Depending on the applications and feature set you decide to use
 fine with less resources. An installation from the live ISOs uses
 approximately 2.1G of space on the hard drive.
 
-## Live CD/DVD/USB key install
+## Installing from a live ISO image (CD/DVD/USB key)
 
 This is the preferred and officially supported installation method. You
 first download a so-called hybrid ISO image which, depending on size, is
