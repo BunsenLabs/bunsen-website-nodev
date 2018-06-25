@@ -65,7 +65,7 @@ There are a few independent communities, see [here for a list](https://www.bunse
 * Refer to the [Getting Started](https://forums.bunsenlabs.org/viewforum.php?id=21) section on the forums, and
 * Please do also look at our [dedicated FAQ page](https://www.bunsenlabs.org/faq.html) page for more general information and bug reporting guidelines.
 
-## In the press
+## Reviews and press
 
 There is a long [forum thread](https://forums.bunsenlabs.org/viewtopic.php?id=763) for collecting quality reviews.
 
