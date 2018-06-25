@@ -64,8 +64,7 @@ Here is a [list](/stuffweuse.html).
 
 You can start by tracking down the original posts on our forums and
 looking up what the respective user has done or used to produce the
-pictured result. You can download the screenshot sources
-[as a static JSON file](https://www.bunsenlabs.org/gallery.json).
+pictured result. You can find all links [here](https://www.bunsenlabs.org/gallery.json).
 
 ## My question isn't answered here!
 
