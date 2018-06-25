@@ -1,2 +1,0 @@
- * Replace conf/variables.mk and `@@`-style templates with Jinja2
- * js/bl-repo-index.js: Make display order of distros stable
