@@ -57,7 +57,7 @@ To log in after booting the live session, enter the username **user** and
 the password **live**.
 </div>
 
-### Downloads
+## Downloads
 
 If you can use BitTorrent, please do so as to keep load off our server.
 If possible, please leave the client open for a while so you can seed
