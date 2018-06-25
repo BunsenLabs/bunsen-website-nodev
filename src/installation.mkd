@@ -112,7 +112,7 @@ install on the Debian old-stable release
 [Wheezy](https://wiki.debian.org/DebianWheezy) and current
 [Ubuntu](http://releases.ubuntu.com/) releases.
 
-### netinstall script
+## Netinstall script
 
 It is also possible to include the BunsenLabs system into a minimal
 [netinstall](https://www.debian.org/CD/netinst/) Debian installation
