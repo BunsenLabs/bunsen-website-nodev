@@ -150,11 +150,17 @@ div.row > a {
 }
 
 a.button, a.button:visited, a.button:hover {
-  border: 2px solid #272822;
-  border-radius: 20px;
+  border: 1px solid #272822;
+  border-radius: 4px;
   padding: 8px;
   text-decoration:none;
   max-width: 250px;
+}
+
+a.button:hover {
+  color: #f6f6f6;
+  background-color: #9b0c0c;
+  border: 1px solid #9b0c0c;
 }
 
 .leader {
@@ -174,11 +180,6 @@ a.button, a.button:visited, a.button:hover {
 .leader a, .leader a:visited {
   text-decoration:none;
   color:#272822;
-}
-
-a.button:hover {
-  background-color: #f6b620;
-  color: #272822;
 }
 
 span.indexheader {
