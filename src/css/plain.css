@@ -142,10 +142,11 @@ body {
 div.row {
   display: flex;
   flex-direction: row;
-
+  flex-basis: 45%;
+  margin: 0 -15px;
 }
 
-div.row > a {
+div.row > a.button {
   flex: auto;
 }
 
@@ -154,13 +155,13 @@ a.button, a.button:visited, a.button:hover {
   border-radius: 4px;
   padding: 8px;
   text-decoration:none;
-  max-width: 250px;
+  max-width: 175px;
 }
 
 a.button:hover {
-  color: #f6f6f6;
   background-color: #9b0c0c;
   border: 1px solid #9b0c0c;
+  color: #f6f6f6!important;
 }
 
 .leader {
@@ -195,7 +196,8 @@ span.fade {
 
 
 div.column {
-  flex: auto;
+  flex: 1;
+  padding: 0 15px;
 }
 
 nav > .content-wrapper, footer > .content-wrapper {

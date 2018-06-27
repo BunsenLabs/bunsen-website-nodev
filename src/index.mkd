@@ -4,7 +4,7 @@
 [releaseurl]: <@@RELEASE_ANNOUNCEMENT_URL@@>
 [censuslink]: <https://wiki.debian.org/Derivatives/Census/BunsenLabs>
 
-## Defining features
+## Features
 
 The distribution consists of configuration and resource packages
 installed on top of Debian. There are no changes to the way the Debian
@@ -27,10 +27,9 @@ configuration. As an example, here's an user-contributed [walkthrough video](htt
 what kind and style of desktop experience you may end up with.
 
 <div class="row">
+  <div class="column">
 
-<div class="column">
-
-## Architectures
+### Architectures
 
 We offer combined [live-CD and installation
 media](/installation.html#installing-from-a-live-iso-image-cddvdusb-key) for the Debian
@@ -41,11 +40,10 @@ Our repository currently provides **[armhf](https://wiki.debian.org/ArmHardFloat
 If you would like to see [another Debian ARM port](https://www.debian.org/ports/arm/) supported,
 file a request [here](https://forums.bunsenlabs.org/viewforum.php?id=13).
 
-</div>
+  </div>
+  <div class="column">
 
-<div class="column">
-
-## Community support
+### Community support
 
 In general, we recommend new users to [visit and sign up for  our
 forums](https://forums.bunsenlabs.org): It provides plenty of resources
@@ -56,13 +54,7 @@ as the place to voice suggestions and report bugs.
 There are a few independent communities, see [here for a list](https://www.bunsenlabs.org/faq.html#independent-channels).
 
 </div>
-
 </div>
-
-## FAQ and How to get started
-
-* Refer to the [Getting Started](https://forums.bunsenlabs.org/viewforum.php?id=21) section on the forums, and
-* Please do also look at our [dedicated FAQ page](https://www.bunsenlabs.org/faq.html) page for more general information and bug reporting guidelines.
 
 ## Reviews and press
 
@@ -88,4 +80,3 @@ There is a long [forum thread](https://forums.bunsenlabs.org/viewtopic.php?id=76
 * 2015-11-15: Sunday Morning Linux Review, Episode 167: *[BunsenLabs Linux](http://smlr.us/?p=4833/)*
 * 2015-09-21: DistroWatch Weekly, Issue 628: *[New Linux distributions](http://distrowatch.com/weekly.php?issue=20150921#waiting)*
 * 2015-06-21: entornos GNU/Linux: *[Un pasno por BunsenLabs GNU/Linux 8.1 (Hydrogen)](http://entornosgnulinux.com/2015/06/21/un-paseo-por-bunsenlabs-gnulinux-8-1-hydrogen/)*
-
