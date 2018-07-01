@@ -146,6 +146,19 @@ div.row {
   margin: 0 -15px;
 }
 
+div.gallery {
+  display:flex;
+  flex-direction:column;
+  position:absolute;
+  text-align:left;
+  padding-left: 2em;
+  left:0;
+}
+
+div.gallery > a {
+  flex:auto;
+}
+
 div.row > a.button {
   flex: auto;
 }
@@ -606,6 +619,9 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
   }
   span.news-updated {
     display:none;
+  }
+  div.gallery {
+    display:none!important;
   }
 }
 

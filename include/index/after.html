@@ -1,14 +1,5 @@
-<script src="/bundle/slider/ideal-image-slider.min.js"></script>
-<script src="/bundle/slider/extensions/bullet-nav/iis-bullet-nav.js"></script>
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/bundle/simplelightbox/dist/simple-lightbox.min.js"></script>
 <script>
-    document.querySelector(".sliderbox").style.display = "flex";
-    var slider = new IdealImageSlider.Slider(
-        {
-          selector: "#slider",
-          interval: 5000,
-          height: 300,
-          maxHeight: 512
-        });
-    slider.addBulletNav();
-    slider.start();
+    var box = $('.gallery a').simpleLightbox();
 </script>

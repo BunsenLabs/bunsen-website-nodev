@@ -42,7 +42,6 @@ TORRENT_URL_32CD           = $(DDL_URL_32CD).torrent
 TORRENT_URL_64             = $(DDL_URL_64).torrent
 
 GALLERY = $(shell cat include/index/gallery.html|sed 's/^\s*//'|tr -d '\n')
-GALLERY_NOSCRIPT = $(shell cat include/index/gallery_noscript.html|sed 's/^\s*//'|tr -d '\n')
 
 ### REFERENCED IN Makefile ###
 

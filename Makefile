@@ -36,7 +36,6 @@ FAVICON_SIZES               = 256 180 128
 FAVICON_SOURCE              = src/img/bl-flame-48px.svg
 
 GALLERY_HEADER              = include/index/gallery.html
-GALLERY_NOSCRIPT_HEADER     = include/index/gallery_noscript.html
 GALLERY_INDEX               = src/gallery.json
 
 DONATION_JSON               = dst/donations.json
@@ -46,7 +45,7 @@ DONATION_DATA               = config/donations.csv
 TARGETS                     = $(patsubst %.mkd,%.html,$(wildcard src/*.mkd)) $(DONATION_JSON)
 ASSETS                      = $(TARGETS) src/BunsenLabs-RELEASE.asc src/bundle src/js src/img src/css src/robots.txt src/bitcoinaddress.txt $(GALLERY_INDEX)
 
-THUMB_DIM                   = 750x
+THUMB_DIM                   = x50
 THUMB_DIR                   = src/img/frontpage-gallery/thumbs
 THUMB_FULLSIZE_JPEG_QUALITY = 90
 THUMB_JPEG_QUALITY          = 90
@@ -109,7 +108,6 @@ clean:
 	@rm -f src/img/installguide/*.jpg src/img/installguide/thumbs/*
 	@rm -f src/img/favicon*.png
 	@rm -f $(FAVICON_HEADER)
-	@rm -f $(GALLERY_NOSCRIPT_HEADER)
 	@rm -f $(GALLERY_HEADER)
 	@rm -f $(GALLERY_INDEX)
 	@rm -fr dst/*
@@ -121,6 +119,10 @@ deploy-kelaino: build
 deploy-local: build
 	$(call LOG_STATUS,DEPLOY,LOCAL)
 	@-rsync -a --progress --human-readable --delete --chmod=D0755,F0644 dst/ /var/www/
+
+deploy-beta: build
+	$(call LOG_STATUS,DEPLOY,BETA)
+	@-rsync -au --progress --human-readable --delete --exclude=private --chmod=D0755,F0644 dst/ root@kelaino:/srv/kelaino.bunsenlabs.org/~twoion/
 
 $(FAVICON_HEADER): $(FAVICON_SOURCE)
 	$(call LOG_STATUS,FAVICON,$(FAVICON_SIZES))
@@ -137,7 +139,7 @@ variables: src/installation.html src/index.html src/news.html
 	@pandoc $(ARGV) $(PANDOC_VARS) -o $@ $<
 	@./libexec/postproc $@
 
-src/index.html: src/index.mkd $(TEMPLATE) $(wildcard include/index/*.html) $(FAVICON_HEADER) $(GALLERY_HEADER) $(GALLERY_NOSCRIPT_HEADER)
+src/index.html: src/index.mkd $(TEMPLATE) $(wildcard include/index/*.html) $(FAVICON_HEADER) $(GALLERY_HEADER) $(RECENT_NEWS_HEADER)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
 	@pandoc $(filter-out --toc,$(ARGV)) $(PANDOC_VARS) \
 		-H include/index/header.html \
@@ -174,10 +176,6 @@ $(DONATION_JSON): $(DONATION_DATA) ./libexec/donation-report
 $(GALLERY_HEADER): $(SETTINGS)
 	$(call LOG_STATUS,GALLERY,$(notdir $@))
 	@./libexec/gallery $< > $@
-
-$(GALLERY_NOSCRIPT_HEADER): $(GALLERY_HEADER)
-	$(call LOG_STATUS,GALLERY,$(notdir $@))
-	@./libexec/noscript-gallery $< > $@
 
 $(GALLERY_INDEX): $(SETTINGS) libexec/gallery-json
 	$(call LOG_STATUS,GALLERY,$@)
