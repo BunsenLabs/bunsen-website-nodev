@@ -563,3 +563,9 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
 form#package-search {
   margin-top:20px;
 }
+
+.panel {
+  padding:2ex 2ex 0 2ex;
+  background-color: #f6f6f6;
+  border: 1px solid #ddd;
+}
