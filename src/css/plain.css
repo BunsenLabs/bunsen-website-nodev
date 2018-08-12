@@ -449,6 +449,8 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
 #bl-repo-index thead {
   border-bottom: 1pt solid #272822;
   background-color: #f5f5f5;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
 }
 
 #bl-repo-index tbody tr:hover {
