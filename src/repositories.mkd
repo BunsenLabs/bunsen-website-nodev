@@ -77,11 +77,11 @@ using the provided keyring package.
 
 ### Keyring package
 
-Download the latest .deb keyring package and install it:
-
-~~~ {.bash}
-wget https://pkg.bunsenlabs.org/debian/pool/main/b/bunsen-keyring/bunsen-keyring_2016.7.2-1_all.deb
-sudo dpkg -i bunsen-keyring_2016.7.2-1_all.deb
+  1. [Select and download](https://www.bunsenlabs.org/repoidx.html?k=name-description&v=bunsen-keyring) the latest `bunsen-keyring` package for your
+     distribution.
+  2. Install the package:
+~~~
+sudo dpkg -i $package
 sudo apt-get update
 ~~~
 
