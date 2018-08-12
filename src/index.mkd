@@ -26,7 +26,7 @@ and we also host [several active threads](https://forums.bunsenlabs.org/viewforu
 configuration. As an example, here's an user-contributed [walkthrough video](https://youtu.be/TUXohePdiR4) showing
 what kind and style of desktop experience you may end up with.
 
-<div class="row">
+<div id="subfeatures" class="row">
   <div class="column">
 
 ### Architectures

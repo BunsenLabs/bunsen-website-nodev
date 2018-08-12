@@ -623,6 +623,9 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
   div.gallery {
     display:none!important;
   }
+  #subfeatures {
+    display:block;
+  }
 }
 
 @media all and (max-width: 799px) and (orientation: landscape) {
