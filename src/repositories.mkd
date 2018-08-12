@@ -91,7 +91,7 @@ Fetch and verify the repository's [signing key][SigningKey]:
 
 ~~~ { .bash }
 wget https://pkg.bunsenlabs.org/BunsenLabs-RELEASE.asc
-gpg --with-fingerprint BunsenLabs-RELEASE.asc
+gpg --fingerprint BunsenLabs-RELEASE.asc
 ~~~
 
 The key's fingerprint as displayed by gpg should be identical with the
