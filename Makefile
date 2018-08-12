@@ -35,8 +35,6 @@ FAVICON_HEADER              = include/favicons.html
 FAVICON_SIZES               = 256 180 128
 FAVICON_SOURCE              = src/img/bl-flame-48px.svg
 
-RECENT_NEWS_HEADER					= include/news.html
-
 GALLERY_HEADER              = include/index/gallery.html
 GALLERY_NOSCRIPT_HEADER     = include/index/gallery_noscript.html
 GALLERY_INDEX               = src/gallery.json
@@ -114,7 +112,6 @@ clean:
 	@rm -f $(GALLERY_NOSCRIPT_HEADER)
 	@rm -f $(GALLERY_HEADER)
 	@rm -f $(GALLERY_INDEX)
-	@rm -f $(RECENT_NEWS_HEADER)
 	@rm -fr dst/*
 
 deploy-kelaino: build
@@ -129,10 +126,6 @@ $(FAVICON_HEADER): $(FAVICON_SOURCE)
 	$(call LOG_STATUS,FAVICON,$(FAVICON_SIZES))
 	@./libexec/mkfavicons $< $(FAVICON_HEADER) $(FAVICON_SIZES) &>/dev/null
 
-$(RECENT_NEWS_HEADER): libexec/news-noscript
-	$(call LOG_STATUS,NEWS,$^)
-	@./libexec/news-noscript $@
-
 variables: src/installation.html src/index.html src/news.html
 	$(call LOG_STATUS,VARIABLES,$(notdir $^))
 	$(foreach VAR,$(RELEASE_SUBST),$(shell sed -i 's^@@$(VAR)@@^$($(VAR))^' $^ ))
@@ -144,7 +137,7 @@ variables: src/installation.html src/index.html src/news.html
 	@pandoc $(ARGV) $(PANDOC_VARS) -o $@ $<
 	@./libexec/postproc $@
 
-src/index.html: src/index.mkd $(TEMPLATE) $(wildcard include/index/*.html) $(FAVICON_HEADER) $(GALLERY_HEADER) $(GALLERY_NOSCRIPT_HEADER) $(RECENT_NEWS_HEADER)
+src/index.html: src/index.mkd $(TEMPLATE) $(wildcard include/index/*.html) $(FAVICON_HEADER) $(GALLERY_HEADER) $(GALLERY_NOSCRIPT_HEADER)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
 	@pandoc $(ARGV) $(PANDOC_VARS) \
 		-H include/index/header.html \
