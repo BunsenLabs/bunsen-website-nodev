@@ -311,6 +311,7 @@ function link_debian_packages(str, node) {
     if(DIST_ALL_PKGS[pkgname]) {
       a.setAttribute("href", "#" + DIST_ALL_PKGS[pkgname].replace("_", "-") + "-" + pkgname);
       a.setAttribute("class", "local-package");
+      a.setAttribute("title", `Jump to local package ${pkgname}`);
     }
     else
       a.setAttribute("href", qurl + pkgname);
