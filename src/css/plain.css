@@ -426,6 +426,10 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
   float:right;
 }
 
+#bl-repo-index .local-package {
+  color: #9b0c0c;
+}
+
 #bl-repo-index h3 {
   margin-bottom:-0.5em;
 }
