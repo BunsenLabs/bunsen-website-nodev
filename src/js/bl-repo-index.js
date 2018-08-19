@@ -308,8 +308,10 @@ function link_debian_packages(str, node) {
     let fields = pkgstr.split(" ");
     let pkgname = fields[0];
     let a = document.createElement("a");
-    if(DIST_ALL_PKGS[pkgname])
+    if(DIST_ALL_PKGS[pkgname]) {
       a.setAttribute("href", "#" + DIST_ALL_PKGS[pkgname].replace("_", "-") + "-" + pkgname);
+      a.setAttribute("class", "local-package");
+    }
     else
       a.setAttribute("href", qurl + pkgname);
     a.textContent = pkgstr;
