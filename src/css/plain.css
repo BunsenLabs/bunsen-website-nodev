@@ -97,13 +97,13 @@
   font-family: 'Ubuntu Mono';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/ubuntu-mono-v7-latin-regular.eot'); /* IE9 Compat Modes */
+  src: url('/bundle/fonts/ubuntu-mono-v7-latin-regular.eot'); /* IE9 Compat Modes */
   src: local('Ubuntu Mono'), local('UbuntuMono-Regular'),
-       url('../fonts/ubuntu-mono-v7-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/ubuntu-mono-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/ubuntu-mono-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/ubuntu-mono-v7-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/ubuntu-mono-v7-latin-regular.svg#UbuntuMono') format('svg'); /* Legacy iOS */
+       url('/bundle/fonts/ubuntu-mono-v7-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/bundle/fonts/ubuntu-mono-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/bundle/fonts/ubuntu-mono-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('/bundle/fonts/ubuntu-mono-v7-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/bundle/fonts/ubuntu-mono-v7-latin-regular.svg#UbuntuMono') format('svg'); /* Legacy iOS */
 }
 
 .center {
