@@ -75,7 +75,7 @@ signature to verify any download[^3].
 | \@\@ISO\_32\@\@   | \@\@ISO\_32\_SIZE\@\@ | [⬛][TorrentFile32]<span title="⬆: Seeders ⬇: Leechers" class="torrent-status" id="0894839e6111d8062e39b09a125a83f4ed052c88"></span>        | [⬛][DDL32]     | [⬛][shasums32]   | [⬛][pgp32]       |
 | \@\@ISO\_32CD\@\@ | \@\@ISO\_32CD\_SIZE\@\@ | [⬛][TorrentFile32CD]<span title="⬆: Seeders ⬇: Leechers" class="torrent-status" id="a195e06888e9cc81a01dc16240347889478f036e"></span>        | [⬛][DDL32CD]     | [⬛][shasums32CD]   | [⬛][pgp32CD]       |
 
-For archived releases, click [here](https://ddl.bunsenlabs.org/ddl).
+For archived releases, click [here](https://ddl.bunsenlabs.org/ddl/Archive).
 
 There is a [section](https://forums.bunsenlabs.org/viewforum.php?id=14)
 on the forums which deals with any issues, bugs and comments related to
