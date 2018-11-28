@@ -489,6 +489,11 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
   color:#6f6f6f;
 }
 
+.subtitle {
+  font-family:"Ubuntu Monot";
+  color:#6f6f6f;
+}
+
 .news-heading {
   position:relative;
 }
