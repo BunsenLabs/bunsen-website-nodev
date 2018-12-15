@@ -116,6 +116,10 @@ deploy-kelaino: build
 	$(call LOG_STATUS,DEPLOY,KELAINO)
 	@-rsync -au --progress --human-readable --delete --exclude=private --chmod=D0755,F0644 dst/ root@kelaino:/srv/kelaino.bunsenlabs.org/www/
 
+deploy-preview: build
+	$(call LOG_STATUS,DEPLOY,PREVIEW)
+	@-rsync -au --progress --human-readable --delete --exclude=private --chmod=D0755,F0644 dst/ root@kelaino:/srv/kelaino.bunsenlabs.org/www-beta/preview/
+
 deploy-local: build
 	$(call LOG_STATUS,DEPLOY,LOCAL)
 	@-rsync -a --progress --human-readable --delete --chmod=D0755,F0644 dst/ /var/www/
