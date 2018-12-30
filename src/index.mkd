@@ -29,7 +29,7 @@ what kind and style of desktop experience you may end up with.
 <div id="subfeatures" class="row">
   <div class="column">
 
-### Architectures
+## Architectures
 
 We offer combined [live-CD and installation
 media](/installation.html#installing-from-a-live-iso-image-cddvdusb-key) for the Debian
@@ -43,7 +43,7 @@ file a request [here](https://forums.bunsenlabs.org/viewforum.php?id=13).
   </div>
   <div class="column">
 
-### Community support
+## Community support
 
 In general, we recommend new users to [visit and sign up for  our
 forums](https://forums.bunsenlabs.org): It provides plenty of resources
