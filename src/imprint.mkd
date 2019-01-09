@@ -2,9 +2,6 @@
 
 The Webmaster contact is [admin@bunsenlabs.org](mailto:admin@bunsenlabs.org).
 
-Postal mail for the BunsenLabs Linux Project is to be sent to the
-administrative contact (ADMIN-C) of the domain name 2ion.de.
-
 ## Legal remarks · Rechtliche Hinweise
 
 Die Inhalte unserer Webseiten haben wir sorgfältig zusammen gestellt.
