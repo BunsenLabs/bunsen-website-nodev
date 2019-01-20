@@ -94,7 +94,7 @@ file, and **not** the ISO file!
 
 [^3]: We use our [release key][releasekey] for signing. Import the key
 into your local user's keyring by executing `gpg --import <(wget -qO-
-https://www.bunsenlabs.org/BunsenLabs-RELEASE.asc)`.  Verify the
+https://ddl.bunsenlabs.org/ddl/BunsenLabs-RELEASE.asc)`.  Verify the
 signature by downloading both the ISO file and the signature file to the
 same directory and invoking GnuPG as follows: `gpg --verify
 ${SIGNATURE_FILE} ${ISO_FILE}`. GnuPG should tell you that you passed it
