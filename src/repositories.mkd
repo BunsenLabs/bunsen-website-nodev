@@ -1,4 +1,4 @@
-[SigningKey]: <https://pkg.bunsenlabs.org/BunsenLabs-RELEASE.asc>
+[SigningKey]: <https://ddl.bunsenlabs.org/ddl/BunsenLabs-RELEASE.asc>
 [AptSources]: <https://pkg.bunsenlabs.org/templates/etc/apt/sources.list.d/bunsen.list>
 [AptSourcesBp]: <https://pkg.bunsenlabs.org/templates/etc/apt/sources.list.d/bunsen-jessie-backports.list>
 [DebianTree]: <https://pkg.bunsenlabs.org/debian/>
@@ -90,7 +90,7 @@ sudo apt-get update
 Fetch and verify the repository's [signing key][SigningKey]:
 
 ~~~ { .bash }
-wget https://pkg.bunsenlabs.org/BunsenLabs-RELEASE.asc
+wget https://ddl.bunsenlabs.org/ddl/BunsenLabs-RELEASE.asc
 gpg --fingerprint BunsenLabs-RELEASE.asc
 ~~~
 
