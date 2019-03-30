@@ -1,1 +1,10 @@
+<noscript>
+<div class="warning">
+<p>
+News items are dynamically fetched from forums.bunsenlabs.org to be presented
+here. Enable JavaScript to allow this or go directly to our <a href="https://forums.bunsenlabs.org/viewforum.php?id=12">News subforum</a>
+in order to view the news stream.
+</p>
+</div>
+</noscript>
 <div class="news"></div>
