@@ -103,7 +103,7 @@ a 'good signature'.
 ## Package-based install
 
 You may also choose to follow our repository set-up
-[instructions](http://pkg.bunsenlabs.org) and include our package
+[instructions](https://www.bunsenlabs.org/repositories.html) and include our package
 repository into your existing Debian system. This way, you can
 selectively install [packages from the BunsenLabs project](https://www.bunsenlabs.org/repoidx.html?k=name-description&v=bunsen-)
 and use only a subset of our configurations and assets.
