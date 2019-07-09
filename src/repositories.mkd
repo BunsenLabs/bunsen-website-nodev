@@ -91,7 +91,14 @@ Fetch and verify the repository's [signing key][SigningKey]:
 
 ~~~ { .bash }
 wget https://ddl.bunsenlabs.org/ddl/BunsenLabs-RELEASE.asc
-gpg --fingerprint BunsenLabs-RELEASE.asc
+# The following will NOT affect your actual trusted keyring - a transient
+# keyring is created in a temporary directory and then deleted. This awkwardness
+# is because I cannot figure out how to do this in a portable way across
+# different gpg versions and in a way that always works.
+tmpdir=$(mktemp -d)
+gpg --homedir "$tmpdir" --import /tmp/BunsenLabs-RELEASE.asc &>/dev/null
+gpg --homedir "$tmpdir" --fingerprint
+rm -r -- "$tmpdir"/
 ~~~
 
 The key's fingerprint as displayed by gpg should be identical with the
