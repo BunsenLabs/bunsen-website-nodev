@@ -79,6 +79,7 @@ PANDOC_VARS=                                   \
 	clean          \
 	deploy-kelaino \
 	deploy-local   \
+	deploy-static  \
 	html-pages     \
 	thumbnails
 
@@ -119,6 +120,10 @@ deploy-kelaino: build
 deploy-preview: build
 	$(call LOG_STATUS,DEPLOY,PREVIEW)
 	@-rsync -au --progress --human-readable --delete --exclude=private --chmod=D0755,F0644 dst/ root@kelaino:/srv/kelaino.bunsenlabs.org/www-beta/preview/
+
+deploy-static: build
+	$(call LOG_STATUS,DEPLOY,$@)
+	@-rsync -au --progress --human-readable --delete --exclude=private --chmod=D0755,F0644 dst/ root@static.lxc:/srv/www/
 
 deploy-local: build
 	$(call LOG_STATUS,DEPLOY,LOCAL)
