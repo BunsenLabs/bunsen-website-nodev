@@ -592,13 +592,32 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
 }
 
 /* Responsive @media */
+
 @media all and (min-width: 800px) {
   nav img {
     height: 120px;
   }
 }
 
-@media all and (max-width: 799px) {
+@media all and (max-width: 1200px) {
+  .content-wrapper {
+    width:66%;
+  }
+}
+
+@media all and (max-width: 1100px) {
+  .gallery a img {
+    width:66%;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  div.gallery {
+    display:none!important;
+  }
+}
+
+@media all and (max-width: 900px) {
   nav img {
     width: 85%;
   }
