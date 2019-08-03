@@ -645,6 +645,18 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
   #subfeatures {
     display:block;
   }
+  div.row {
+    flex-direction:column;
+    align-items:center;
+  }
+  div.row a.button {
+    width:100%;
+    margin-top:2ex;
+  }
+  div.row p {
+    padding-left:1em;
+    padding-right:1em;
+  }
 }
 
 @media all and (max-width: 799px) and (orientation: landscape) {
