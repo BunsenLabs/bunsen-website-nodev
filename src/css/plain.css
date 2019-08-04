@@ -632,6 +632,9 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
   nav .content-wrapper a, footer .footer-row a {
     display:block;
   }
+  .nav-row a, .nav-row a:visited {
+    width:100%;
+  }
   .footer-sponsor {
     display:none;
   }
