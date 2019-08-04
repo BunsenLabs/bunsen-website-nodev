@@ -218,7 +218,7 @@ nav > .content-wrapper, footer > .content-wrapper {
 }
 
 nav {
-  padding: 2ex 0 3ex 0;
+  padding: 2ex 0 2ex 0;
   background-color: #272822;
 }
 
@@ -263,9 +263,14 @@ footer {
   border-bottom:4px solid #272822;
 }
 
+.nav-row {
+  flex-wrap: wrap;
+}
+
 .nav-row a, .nav-row a:visited {
+  flex:auto;
   margin-top: 4px;
-  padding: 6px 12px 6px 12px;
+  padding: 6px 6px 6px 6px;
   color: #fff;
   font-size: 2ex;
   text-decoration:none;
