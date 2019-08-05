@@ -45,3 +45,7 @@ Linux® is the registered trademark of Linus Torvalds in the U.S.  and other
 countries.
 
 netcup® is the registered trademark of Felix Preuß.
+
+The OpenSans web font is licensed under the Apache License, version 2.0.
+
+The Roboto web font is licensed under the Apache License, version 2.0.
