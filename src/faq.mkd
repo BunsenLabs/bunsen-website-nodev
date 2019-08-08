@@ -29,22 +29,20 @@ BunsenLabs is being developed in public, [on Github](https://github.com/BunsenLa
 ## Who are (and were) the project members?
 
   * Active members/developers:
+    * [Sector11](https://forums.bunsenlabs.org/profile.php?id=5)
+    * [Unia](https://forums.bunsenlabs.org/profile.php?id=12)
     * [damo](https://forums.bunsenlabs.org/profile.php?id=6)
     * [hhh](https://forums.bunsenlabs.org/profile.php?id=10)
     * [johnraff](https://forums.bunsenlabs.org/profile.php?id=7)
     * [malm](https://forums.bunsenlabs.org/profile.php?id=2253)
-    * [tknomanzr](https://forums.bunsenlabs.org/profile.php?id=38)
     * [twoion](https://forums.bunsenlabs.org/profile.php?id=2)
-    * [Unia](https://forums.bunsenlabs.org/profile.php?id=12)
-
-  * Honour Members:
-    * [Sector11](https://forums.bunsenlabs.org/profile.php?id=5)
 
   * Retired or currently inactive members:
     * [Head on a Stick](https://forums.bunsenlabs.org/profile.php?id=74)
-    * [xaos52](https://forums.bunsenlabs.org/profile.php?id=159)
-    * [pvsage](https://forums.bunsenlabs.org/profile.php?id=39)
     * [lcafiero](https://forums.bunsenlabs.org/profile.php?id=168)
+    * [pvsage](https://forums.bunsenlabs.org/profile.php?id=39)
+    * [tknomanzr](https://forums.bunsenlabs.org/profile.php?id=38)
+    * [xaos52](https://forums.bunsenlabs.org/profile.php?id=159)
 
 ## Where can I report bugs?
 
