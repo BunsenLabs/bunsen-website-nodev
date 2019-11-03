@@ -29,7 +29,8 @@ const BLDIST = {
     "https://eu.pkg.bunsenlabs.org/debian/dists/jessie-backports/main/binary-armhf/Packages"],
   "stretch-backports": [
     "https://eu.pkg.bunsenlabs.org/debian/dists/stretch-backports/main/binary-amd64/Packages",
-    "https://eu.pkg.bunsenlabs.org/debian/dists/stretch-backports/main/binary-i386/Packages"
+    "https://eu.pkg.bunsenlabs.org/debian/dists/stretch-backports/main/binary-i386/Packages",
+    "https://eu.pkg.bunsenlabs.org/debian/dists/stretch-backports/main/binary-armhf/Packages",
   ],
   "helium": [
     "https://eu.pkg.bunsenlabs.org/debian/dists/helium/main/binary-amd64/Packages",
@@ -39,6 +40,7 @@ const BLDIST = {
  "lithium": [
     "https://eu.pkg.bunsenlabs.org/debian/dists/lithium/main/binary-amd64/Packages",
     "https://eu.pkg.bunsenlabs.org/debian/dists/lithium/main/binary-i386/Packages",
+    "https://eu.pkg.bunsenlabs.org/debian/dists/lithium/main/binary-armhf/Packages",
   ],
 };
 
