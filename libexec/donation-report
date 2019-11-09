@@ -6,7 +6,6 @@ import datetime
 import json
 import os
 import sys
-import time
 
 def getopts() -> Namespace:
     ap = ArgumentParser()
@@ -81,7 +80,7 @@ def main():
         "want_pa": yearly,
         "reserve": reserve,
         "last_update": mtime(opts.donations_csv),
-        }))
+        }, indent=2))
 
     return 0
 
