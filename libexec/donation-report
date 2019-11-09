@@ -1,15 +1,29 @@
 #!/usr/bin/env python3
 
-import sys
+from argparse import ArgumentParser, Namespace
 import csv
-import time
+import datetime
 import json
+import os
+import sys
+import time
+
+def getopts() -> Namespace:
+    ap = ArgumentParser()
+    ap.add_argument("donations_csv")
+    return ap.parse_args()
+
+def mtime(path: str) -> str:
+    return (datetime.datetime.fromtimestamp(os.stat(path)
+                .st_mtime
+                .strftime('%Y-%m-%d')))
 
 def main():
+    opts = getopts()
     records = {}
     headermap = {}
 
-    with open(sys.argv[1], "r", encoding='utf-8-sig') as FILE:
+    with open(opts.donations_csv, "r", encoding='utf-8-sig') as FILE:
         tid = -1
         data = csv.reader(FILE)
         header = True
@@ -67,7 +81,7 @@ def main():
         "short_pct": round(abs(shortfall)/yearly, 2),
         "want_pa": yearly,
         "reserve": reserve,
-        "last_update": time.strftime("%Y-%m-%d")
+        "last_update": mtime(opts.donations_csv),
         }))
 
     return 0
