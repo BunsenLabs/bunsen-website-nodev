@@ -1,29 +1,36 @@
 #!/usr/bin/env python3
 
-from django.utils import feedgenerator as fg
+from argparse import ArgumentParser
 from bs4 import BeautifulSoup as bs
-import sys
+from django.utils import feedgenerator as fg
 import os
+import sys
 
 if __name__ == "__main__":
-    DESTDIR = sys.argv[1]
+    ap = ArgumentParser()
+    ap.add_argument("destdir", help="Root of the HTML page hiearchy")
+    ap.add_argument("atomfile", help="File to write the output Atom feed to")
+    ap.add_argument("rssfile", help="File to write the output RSS feed to")
+    opts = ap.parse_args()
+    opts.destdir = sys.argv[1]
     feedhead = [
-            "BunsenLabs Linux",
-            "https://www.bunsenlabs.org",
-            "BunsenLabs Linux is a distribution offering a light-weight and easily customizable Openbox desktop" ]
+        "BunsenLabs Linux",
+        "https://www.bunsenlabs.org",
+        "BunsenLabs Linux is a distribution offering a light-weight and easily customizable Openbox desktop"
+    ]
     atom = fg.Atom1Feed(*feedhead)
     rss = fg.Rss201rev2Feed(*feedhead)
-    for root, dirs, files in os.walk(DESTDIR):
-        if root != DESTDIR:
+    for root, dirs, files in os.walk(opts.destdir):
+        if root != opts.destdir:
             break
-        for f in sorted([ DESTDIR + '/' + f for f in files if f.endswith(".html") ]):
+        for f in sorted([ os.path.join(opts.destdir, f) for f in files if f.endswith(".html") ]):
             with open(f, "r") as FILE:
                 soup = bs(FILE, "html.parser")
                 title = soup.find("title").text
                 descr = soup.find("meta", {"name":"description"})["content"]
-                atom.add_item(title, "https://www.bunsenlabs.org/" + f.split("/")[-1], descr)
-                rss.add_item(title, "https://www.bunsenlabs.org/" + f.split("/")[-1], descr)
-    with open(sys.argv[2], "w") as FILE:
+                atom.add_item(title, f"https://www.bunsenlabs.org/{os.path.basename(f)}", descr)
+                rss.add_item(title, f"https://www.bunsenlabs.org/{os.path.basename(f)}", descr)
+    with open(opts.atomfile, "w") as FILE:
         atom.write(FILE, "utf-8")
-    with open(sys.argv[3], "w") as FILE:
+    with open(opts.rssfile, "w") as FILE:
         rss.write(FILE, "utf-8")
