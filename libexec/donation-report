@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from argparse import ArgumentParser, Namespace
-import csv
+from csv import DictReader
 import datetime
 import json
 import os
@@ -9,7 +9,7 @@ import sys
 
 def getopts() -> Namespace:
     ap = ArgumentParser()
-    ap.add_argument("donations_csv")
+    ap.add_argument("donations_csv", help="PayPal activity report (CSV)")
     return ap.parse_args()
 
 def mtime(path: str) -> str:
@@ -18,42 +18,22 @@ def mtime(path: str) -> str:
 
 def main():
     opts = getopts()
-    records = {}
-    headermap = {}
-
-    with open(opts.donations_csv, "r", encoding='utf-8-sig') as FILE:
-        tid = -1
-        data = csv.reader(FILE)
-        header = True
-        for row in data:
-            if header:
-                header = not header
-                coli = 0
-                for c in row:
-                    headermap[coli] = c
-                    if c == "Transaction ID":
-                        tid = coli
-                    coli += 1
-            else:
-                rowdata = {}
-                for i in range(0, len(row)):
-                    rowdata[headermap[i]] = row[i]
-                records[row[tid]] = rowdata
 
     fee       = 0.0
     gross     = 0.0
     net       = 0.0
     net_ex    = 0.0
     net_in    = 0.0
-
     shortfall = 0
     yearly    = 500
     reserve   = yearly * 1.5
     yearzero  = 2016
-    year = yearzero
+    year      = yearzero
 
-    for tid in records:
-        r = records[tid]
+    FILE = open(opts.donations_csv, "r", encoding='utf-8-sig')
+    reader = DictReader(FILE)
+
+    for r in reader:
         if r["Currency"] == "USD":
             gross += float(r["Gross"])
             fee += float(r["Fee"])
@@ -64,6 +44,8 @@ def main():
                 net_ex += n
             elif n > 0.0:
                 net_in += n
+
+    FILE.close()
 
     shortfall = net_in
     while shortfall >= 0:
