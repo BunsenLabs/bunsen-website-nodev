@@ -12,7 +12,6 @@ if __name__ == "__main__":
     ap.add_argument("atomfile", help="File to write the output Atom feed to")
     ap.add_argument("rssfile", help="File to write the output RSS feed to")
     opts = ap.parse_args()
-    opts.destdir = sys.argv[1]
     feedhead = [
         "BunsenLabs Linux",
         "https://www.bunsenlabs.org",
