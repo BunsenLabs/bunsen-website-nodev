@@ -1,11 +1,7 @@
 #!/usr/bin/env python3
 
 import sys
-from yaml import load, dump
-try:
-    from yaml import CLoader as Loader, CDumper as Dumper
-except ImportError:
-    from yaml import Loader, Dumper
+import yaml
 
 def entry(stem, alt):
     return """<a href="/img/frontpage-gallery/{}.jpg" title="Screenshot by {}" target="_blank">\
@@ -15,6 +11,6 @@ if __name__ == "__main__":
     print("""<div class="gallery">""")
     print("""<h2>Screenshots</h2>""")
     with open(sys.argv[1], "r") as FILE:
-        for img in load(FILE)['gallery']:
+        for img in yaml.load(FILE, Loader=yaml.SafeLoader)['gallery']:
             print(entry(img['base'] if 'base' in img else img['author'], img['author']))
     print("""</div>""")

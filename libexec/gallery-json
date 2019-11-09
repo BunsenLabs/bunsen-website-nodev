@@ -15,7 +15,7 @@ def add_link(i):
     return i
 
 with open(sys.argv[1], "r") as IN:
-    data = yaml.load(IN)['gallery']
+    data = yaml.load(IN, Loader=yaml.SafeLoader)['gallery']
 
 data = [ add_link(e) for e in data ]
 
