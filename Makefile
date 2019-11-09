@@ -21,6 +21,7 @@ include config/variables.mk
 
 SHELL                       = /bin/bash
 TIMESTAMP                   = $(shell date +%Y%m%d%H%M)
+REVISION                    = $(shell git rev-parse --short HEAD; git diff-index --quiet HEAD -- || echo -n +)
 LOG_STATUS                  = @printf "\033[1;32m%*s\033[0m %s\n" 10 "$(1)" "$(2)"
 DESTDIR                     = dst
 SETTINGS                    = config/settings.yml
@@ -68,7 +69,8 @@ PANDOC_VARS=                                   \
 	-M filename="$(@F)"                          \
 	-M url-prefix="$(OPENGRAPH_URL_PREFIX)"      \
 	-M opengraph-image="$(OPENGRAPH_IMG)"        \
-	-M opengraph-description="$($<.description)"
+	-M opengraph-description="$($<.description)" \
+	-M git-revision="$(REVISION)"
 
 ###############################################################################
 
