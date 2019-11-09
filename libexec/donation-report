@@ -14,9 +14,8 @@ def getopts() -> Namespace:
     return ap.parse_args()
 
 def mtime(path: str) -> str:
-    return (datetime.datetime.fromtimestamp(os.stat(path)
-                .st_mtime
-                .strftime('%Y-%m-%d')))
+    return (datetime.datetime.fromtimestamp(os.stat(path).st_mtime)
+                .strftime('%Y-%m-%d'))
 
 def main():
     opts = getopts()
