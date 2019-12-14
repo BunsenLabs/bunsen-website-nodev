@@ -2,9 +2,9 @@
 # TEMPLATING SYSTEM
 #
 
-RELEASE_CODENAME           = Helium
+RELEASE_CODENAME           = Lithium
 RELEASE_CODENAME_LOWERCASE = $(shell echo $(RELEASE_CODENAME) | tr '[A-Z]' '[a-z]')
-RELEASE_VERSION            =
+RELEASE_VERSION            = 10
 RELEASE_DATE               = May 1st, 2018
 RELEASE_ANNOUNCEMENT_URL   = https://forums.bunsenlabs.org/viewtopic.php?id=4772
 
