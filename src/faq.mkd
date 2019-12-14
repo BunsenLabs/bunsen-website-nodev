@@ -30,7 +30,7 @@ BunsenLabs is being developed in public, [on Github](https://github.com/BunsenLa
 
   * Active members/developers:
     * [Sector11](https://forums.bunsenlabs.org/profile.php?id=5)
-    * [Unia](https://forums.bunsenlabs.org/profile.php?id=12)
+    * [cog](https://forums.bunsenlabs.org/profile.php?id=635)
     * [damo](https://forums.bunsenlabs.org/profile.php?id=6)
     * [hhh](https://forums.bunsenlabs.org/profile.php?id=10)
     * [johnraff](https://forums.bunsenlabs.org/profile.php?id=7)
@@ -39,6 +39,7 @@ BunsenLabs is being developed in public, [on Github](https://github.com/BunsenLa
 
   * Retired or currently inactive members:
     * [Head on a Stick](https://forums.bunsenlabs.org/profile.php?id=74)
+    * [Unia](https://forums.bunsenlabs.org/profile.php?id=12)
     * [lcafiero](https://forums.bunsenlabs.org/profile.php?id=168)
     * [pvsage](https://forums.bunsenlabs.org/profile.php?id=39)
     * [tknomanzr](https://forums.bunsenlabs.org/profile.php?id=38)

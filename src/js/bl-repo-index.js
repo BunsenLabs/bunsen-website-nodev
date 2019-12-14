@@ -42,6 +42,10 @@ const BLDIST = {
     "https://eu.pkg.bunsenlabs.org/debian/dists/lithium/main/binary-i386/Packages",
     "https://eu.pkg.bunsenlabs.org/debian/dists/lithium/main/binary-armhf/Packages",
   ],
+  "lithium-dev": [
+    "https://kelaino.bunsenlabs.org/~johnraff/debian/dists/lithium/main/binary-amd64/Packages",
+    "https://kelaino.bunsenlabs.org/~johnraff/debian/dists/lithium/main/binary-i386/Packages",
+  ],
 };
 
 const DIST_TOC_ENTRIES = {};            /* Global ToC DOM nodes */
