@@ -30,6 +30,7 @@ BunsenLabs is being developed in public, [on Github](https://github.com/BunsenLa
 
   * Active members/developers:
     * [Sector11](https://forums.bunsenlabs.org/profile.php?id=5)
+    * [brontosaurusrex](https://forums.bunsenlabs.org/profile.php?id=25)
     * [cog](https://forums.bunsenlabs.org/profile.php?id=635)
     * [damo](https://forums.bunsenlabs.org/profile.php?id=6)
     * [hhh](https://forums.bunsenlabs.org/profile.php?id=10)
