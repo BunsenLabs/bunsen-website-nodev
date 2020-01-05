@@ -1,3 +1,10 @@
-dst
 config/donations.csv
 config/donations.csv.bak
+dst
+include/favicons.html
+include/index/gallery*.html
+src/*.html
+src/*.json
+src/img/favicon*
+src/img/frontpage-gallery/*.jpg
+src/img/frontpage-gallery/thumbs
