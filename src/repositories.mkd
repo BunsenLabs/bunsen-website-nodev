@@ -11,14 +11,18 @@ configuration and import our signing key.
 
 Add any applicable source entries to `/etc/apt/sources.list.d/bunsen.list`:
 
-|Supported release(s)| Repository | sources.list entry | Package index |
-|:-------------------|:-----------|:-------------------|:-------------:|
-| Helium             |  helium     | `deb http://pkg.bunsenlabs.org/debian helium main` | [⬛](https://www.bunsenlabs.org/repoidx.html#helium) |
-| Helium             |stretch-backports     | `deb http://pkg.bunsenlabs.org/debian stretch-backports main` | [⬛](https://www.bunsenlabs.org/repoidx.html#stretch-backports) |
-| Hydrogen, Deuterium | bunsen-hydrogen     | `deb http://pkg.bunsenlabs.org/debian bunsen-hydrogen main` | [⬛](https://www.bunsenlabs.org/repoidx.html#bunsen-hydrogen) |
-| Hydrogen, Deuterium | jessie-backports     | `deb http://pkg.bunsenlabs.org/debian jessie-backports main` | [⬛](https://www.bunsenlabs.org/repoidx.html#jessie-backports) |
+|Maintained[^1] | Release(s)         | Repository | sources.list entry | Package index |
+|:---------:|:-------------------|:-----------|:-------------------|:-------------:|
+|     ✓     | Helium             |  helium     | `deb http://pkg.bunsenlabs.org/debian helium main` | [⬛](https://www.bunsenlabs.org/repoidx.html#helium) |
+|     ✓     | Helium             |stretch-backports     | `deb http://pkg.bunsenlabs.org/debian stretch-backports main` | [⬛](https://www.bunsenlabs.org/repoidx.html#stretch-backports) |
+|     ✓     | Hydrogen, Deuterium | jessie-backports     | `deb http://pkg.bunsenlabs.org/debian jessie-backports main` | [⬛](https://www.bunsenlabs.org/repoidx.html#jessie-backports) |
+|           | Hydrogen, Deuterium | bunsen-hydrogen     | `deb http://pkg.bunsenlabs.org/debian bunsen-hydrogen main` | [⬛](https://www.bunsenlabs.org/repoidx.html#bunsen-hydrogen) |
 
-
+[^1]: This means that the distribution will receive updates if bugs are found
+  (our own packages only) or new upstream releases are available (software
+  developed by third parties). As a general rule, distributions named after our
+  releases that are maintained will receive bugfixes and software updates
+  regularly, while 'backports' repositories are updated on a best-effort basis.
 
 <form id="package-search" action="/repoidx.html" method="get" style="text-align:center">
 <input id="filter-value" style="width:75%;display:inline;" type="text" placeholder="Search package…" name="v" minlength="1">
