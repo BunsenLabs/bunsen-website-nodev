@@ -158,7 +158,6 @@ div.row {
   display: flex;
   flex-direction: row;
   flex-basis: 45%;
-  margin: 0 -15px;
 }
 
 div.gallery {
@@ -225,7 +224,10 @@ span.fade {
 
 div.column {
   flex: 1;
-  padding: 0 15px;
+}
+
+.row > .column:not(:last-child) {
+  padding: 0 2em 0 0;
 }
 
 nav > .content-wrapper, footer > .content-wrapper {
@@ -671,6 +673,9 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
   div.row {
     flex-direction:column;
     align-items:center;
+  }
+  .row > .column:not(:last-child) {
+    padding: 0 0 0 0;
   }
   div.row a.button {
     width:100%;
