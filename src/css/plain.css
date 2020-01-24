@@ -146,6 +146,7 @@ body {
     color: #272822;
     background-color: #fff;
     text-rendering: optimizeLegibility;
+    hyphens: auto;
 }
 
 .content-wrapper {
