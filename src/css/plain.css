@@ -402,22 +402,6 @@ span.semibold {
   margin-top:2ex;
 }
 
-.gha-header, .gha-push {
-  display:none;
-}
-
-.gha-feed a, .gha-feed a:visited {
-  color: #9b0c0c ! important;
-}
-
-.gha-feed {
-  background-color: rgba(203, 207, 211, 0.1) ! important;
-}
-
-.gha-footer {
-  border-bottom:1px solid #ddd;
-}
-
 table {
   border-collapse: collapse;
   border-bottom: 2pt solid #272822;
