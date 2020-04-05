@@ -1,7 +1,9 @@
 #!/bin/bash
 
+set -e
+
 readonly INFILE=$1
-readonly OUTDIR=$(dirname "$1");
+readonly OUTDIR=$(dirname -- "$1");
 readonly GENFILE=$2
 
 shift 2
@@ -9,10 +11,8 @@ shift 2
 { 
   for size in "$@"; do
 
-    printf "\t%03dpx favicon ... " $size >&2
-    #rsvg-convert -f png -a -w $size "$INFILE" > "${OUTDIR}/favicon${size}.png"
-    #convert "$INFILE" -density 500 -resize ${size}x${size}  "$OUTDIR/favicon${size}.png"
-    inkscape -h $size -w $size -C -e "$OUTDIR/favicon${size}.png" "$INFILE" &>/dev/null
+    printf "\t%03dpx favicon ... " "$size" >&2
+    inkscape -h "$size" -w "$size" -C -e "$OUTDIR/favicon${size}.png" -- "$INFILE" &>/dev/null
     echo "done." >&2
 
     if [[ $size = 180 ]]; then
