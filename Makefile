@@ -173,7 +173,7 @@ src/donations.html: src/donations.mkd $(TEMPLATE) $(wildcard include/news/*.html
 		-o $@ $<
 	@./libexec/postproc $@
 
-$(DONATION_JSON): $(DONATION_DATA) ./libexec/donation-report
+$(DONATION_JSON): $(DONATION_DATA) ./libexec/donation-report $(DESTDIR)
 	$(call LOG_STATUS,REPORT,$(notdir $@))
 	@./libexec/donation-report $< > $@
 
