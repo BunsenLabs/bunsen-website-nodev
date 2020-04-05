@@ -26,5 +26,4 @@
 * python-django feed generator module
 * python-feedparser
 * python-yaml
-* python-jinja2
 * sed
