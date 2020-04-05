@@ -1,7 +1,7 @@
 # vim: set expandtab
 
 # Build system for the www.bunsenlabs.org website
-# Copyright (C) 2015-2016 Jens John <dev@2ion.de>
+# Copyright (C) 2015-2020 Jens John <dev@2ion.de>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -52,25 +52,25 @@ THUMB_FULLSIZE_JPEG_QUALITY = 90
 THUMB_JPEG_QUALITY          = 90
 THUMB_OBJ                   = $(subst frontpage-gallery/,frontpage-gallery/thumbs/,$(patsubst %.png,%.thumb.jpg,$(wildcard src/img/frontpage-gallery/*.png)))
 
-ARGV=                                                                                  \
-	--email-obfuscation=javascript                                                       \
-	--template=$(TEMPLATE)                                                               \
-	-f markdown+footnotes+fenced_code_attributes+auto_identifiers+definition_lists+smart \
-	-s                                                                                   \
-	-c $(STYLE)                                                                          \
-	--highlight-style monochrome                                                         \
-	--include-before-body=$(NAVIGATION_HTML)                                             \
-	--toc                                                                                \
-	-H $(FAVICON_HEADER)
+ARGV=                                                                                      \
+	--css=$(STYLE)                                                                           \
+	--email-obfuscation=javascript                                                           \
+	--from=markdown+footnotes+fenced_code_attributes+auto_identifiers+definition_lists+smart \
+	--highlight-style=monochrome                                                             \
+	--include-before-body=$(NAVIGATION_HTML)                                                 \
+	--include-in-header=$(FAVICON_HEADER)                                                    \
+	--standalone                                                                             \
+	--template=$(TEMPLATE)                                                                   \
+	--toc
 
-PANDOC_VARS=                                   \
-	-M pagetitle="$($<.title)"                   \
-	-M lang="en"                                 \
-	-M filename="$(@F)"                          \
-	-M url-prefix="$(OPENGRAPH_URL_PREFIX)"      \
-	-M opengraph-image="$(OPENGRAPH_IMG)"        \
-	-M opengraph-description="$($<.description)" \
-	-M git-revision="$(REVISION)"
+PANDOC_VARS=                                           \
+	--metadata=filename="$(@F)"                          \
+	--metadata=git-revision="$(REVISION)"                \
+	--metadata=lang="en"                                 \
+	--metadata=opengraph-description="$($<.description)" \
+	--metadata=opengraph-image="$(OPENGRAPH_IMG)"        \
+	--metadata=pagetitle="$($<.title)"                   \
+	--metadata=url-prefix="$(OPENGRAPH_URL_PREFIX)"
 
 ###############################################################################
 
@@ -86,12 +86,12 @@ PANDOC_VARS=                                   \
 	thumbnails
 
 build: checkout
-	@mkdir -p "$(DESTDIR)/feeds"
+	$(call LOG_STATUS,BUILD)
+	@mkdir -p -- "$(DESTDIR)/feeds"
 	@./libexec/generate-feeds "$(DESTDIR)" "$(DESTDIR)/feeds/atom.xml" "$(DESTDIR)/feeds/rss.xml"
 
-checkout: all
+checkout: all $(DESTDIR)
 	$(call LOG_STATUS,CHECKOUT)
-	@mkdir -p $(DESTDIR)
 	@rsync -auL --exclude='*intermediate*' $(ASSETS) $(DESTDIR)
 
 all: html-pages thumbnails variables $(GALLERY_INDEX)
@@ -99,9 +99,6 @@ all: html-pages thumbnails variables $(GALLERY_INDEX)
 html-pages: $(TARGETS)
 
 thumbnails: $(THUMB_DIR) $(THUMB_OBJ)
-
-$(THUMB_DIR):
-	@mkdir -p $@
 
 gallery-index: $(GALLERY_INDEX)
 
@@ -119,9 +116,9 @@ deploy-kelaino: build
 	$(call LOG_STATUS,DEPLOY,KELAINO)
 	@-rsync -au --progress --human-readable --delete --exclude=private --chmod=D0755,F0644 dst/ root@kelaino:/srv/kelaino.bunsenlabs.org/www/
 
-deploy-preview: build
+deploy-beta: build
 	$(call LOG_STATUS,DEPLOY,PREVIEW)
-	@-rsync -au --progress --human-readable --delete --exclude=private --chmod=D0755,F0644 dst/ root@kelaino:/srv/kelaino.bunsenlabs.org/www-beta/preview/
+	@-rsync -au --progress --human-readable --delete --exclude=private --chmod=D0755,F0644 dst/ root@kelaino:/srv/kelaino.bunsenlabs.org/www-beta/
 
 deploy-static: build
 	$(call LOG_STATUS,DEPLOY,$@)
@@ -130,10 +127,6 @@ deploy-static: build
 deploy-local: build
 	$(call LOG_STATUS,DEPLOY,LOCAL)
 	@-rsync -a --progress --human-readable --delete --chmod=D0755,F0644 dst/ /var/www/
-
-deploy-beta: build
-	$(call LOG_STATUS,DEPLOY,BETA)
-	@-rsync -au --progress --human-readable --delete --exclude=private --chmod=D0755,F0644 dst/ root@kelaino:/srv/kelaino.bunsenlabs.org/~twoion/
 
 $(FAVICON_HEADER): $(FAVICON_SOURCE)
 	$(call LOG_STATUS,FAVICON,$(FAVICON_SIZES))
@@ -199,3 +192,9 @@ $(THUMB_DIR)/%.thumb.jpg: $(THUMB_DIR)/../%.png
 	$(call LOG_STATUS,THUMBNAIL,$(notdir $@))
 	@convert $< -define jpeg:dct-method=float -strip -interlace Plane -sampling-factor 4:2:0 -resize $(THUMB_DIM) -quality $(THUMB_JPEG_QUALITY) $@
 	@convert $< -quality $(THUMB_FULLSIZE_JPEG_QUALITY) $(<:.png=.jpg)
+
+$(DESTDIR):
+	@mkdir -p -- $(@)
+
+$(THUMB_DIR):
+	@mkdir -p $@
