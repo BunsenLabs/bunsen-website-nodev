@@ -1,8 +1,12 @@
 #!/bin/bash
 
-readonly ABSPATH=$(readlink -f "$1")
-readonly POSTPROCDIR=$(dirname "$(readlink -f "$0")")
+set -e
+
+readonly ABSPATH=$(readlink -f -- "$1")
+readonly POSTPROCDIR=$(dirname -- "$(readlink -f -- "$0")")
 
 for PROC in "$POSTPROCDIR"/postproc.d/*.sh ; do
   "$PROC" "$ABSPATH"
 done
+
+exit 0
