@@ -1,16 +1,26 @@
 #!/usr/bin/env python3
 
+from xml.etree import ElementTree
 import sys
 import yaml
 
-def entry(stem, alt):
-    return """<a href="/img/frontpage-gallery/{}.jpg" title="Screenshot by {}" target="_blank">\
-<img alt="[ Screenshot by {} ]" src="/img/frontpage-gallery/thumbs/{}.thumb.jpg"></a>""".format(stem, alt, alt, stem)
-
 if __name__ == "__main__":
-    print("""<div class="gallery">""")
-    print("""<h2>Screenshots</h2>""")
+    div = ElementTree.Element("div", attrib={"class":"gallery"})
+    h2 = ElementTree.SubElement(div, "h2")
+    h2.text = "Screenshots"
     with open(sys.argv[1], "r") as FILE:
         for img in yaml.load(FILE, Loader=yaml.SafeLoader)['gallery']:
-            print(entry(img['base'] if 'base' in img else img['author'], img['author']))
-    print("""</div>""")
+            stem = img['base'] if 'base' in img else img['author']
+            alt = "Screenshot by {}".format(img["author"])
+            full_url = "/img/frontpage-gallery/{}.jpg".format(stem)
+            thumb_url = "/img/frontpage-gallery/thumbs/{}.thumb.jpg".format(stem)
+            a = ElementTree.SubElement(div, "a", attrib={
+                "href": full_url,
+                "title": alt,
+                "target": "_blank"
+            })
+            img = ElementTree.SubElement(a, "img", attrib={
+                "alt": alt,
+                "src": thumb_url,
+            })
+    print(ElementTree.tostring(div, encoding="unicode", method="html"))
