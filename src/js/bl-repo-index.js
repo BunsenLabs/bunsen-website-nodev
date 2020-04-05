@@ -20,27 +20,27 @@
 
 const BLDIST = {
   "bunsen-hydrogen": [
-    "https://eu.pkg.bunsenlabs.org/debian/dists/bunsen-hydrogen/main/binary-amd64/Packages",
-    "https://eu.pkg.bunsenlabs.org/debian/dists/bunsen-hydrogen/main/binary-i386/Packages",
-    "https://eu.pkg.bunsenlabs.org/debian/dists/bunsen-hydrogen/main/binary-armhf/Packages"],
+    "https://pkg.bunsenlabs.org/debian/dists/bunsen-hydrogen/main/binary-amd64/Packages",
+    "https://pkg.bunsenlabs.org/debian/dists/bunsen-hydrogen/main/binary-i386/Packages",
+    "https://pkg.bunsenlabs.org/debian/dists/bunsen-hydrogen/main/binary-armhf/Packages"],
   "jessie-backports": [
-    "https://eu.pkg.bunsenlabs.org/debian/dists/jessie-backports/main/binary-amd64/Packages",
-    "https://eu.pkg.bunsenlabs.org/debian/dists/jessie-backports/main/binary-i386/Packages",
-    "https://eu.pkg.bunsenlabs.org/debian/dists/jessie-backports/main/binary-armhf/Packages"],
+    "https://pkg.bunsenlabs.org/debian/dists/jessie-backports/main/binary-amd64/Packages",
+    "https://pkg.bunsenlabs.org/debian/dists/jessie-backports/main/binary-i386/Packages",
+    "https://pkg.bunsenlabs.org/debian/dists/jessie-backports/main/binary-armhf/Packages"],
   "stretch-backports": [
-    "https://eu.pkg.bunsenlabs.org/debian/dists/stretch-backports/main/binary-amd64/Packages",
-    "https://eu.pkg.bunsenlabs.org/debian/dists/stretch-backports/main/binary-i386/Packages",
-    "https://eu.pkg.bunsenlabs.org/debian/dists/stretch-backports/main/binary-armhf/Packages",
+    "https://pkg.bunsenlabs.org/debian/dists/stretch-backports/main/binary-amd64/Packages",
+    "https://pkg.bunsenlabs.org/debian/dists/stretch-backports/main/binary-i386/Packages",
+    "https://pkg.bunsenlabs.org/debian/dists/stretch-backports/main/binary-armhf/Packages",
   ],
   "helium": [
-    "https://eu.pkg.bunsenlabs.org/debian/dists/helium/main/binary-amd64/Packages",
-    "https://eu.pkg.bunsenlabs.org/debian/dists/helium/main/binary-i386/Packages",
-    "https://eu.pkg.bunsenlabs.org/debian/dists/helium/main/binary-armhf/Packages"
+    "https://pkg.bunsenlabs.org/debian/dists/helium/main/binary-amd64/Packages",
+    "https://pkg.bunsenlabs.org/debian/dists/helium/main/binary-i386/Packages",
+    "https://pkg.bunsenlabs.org/debian/dists/helium/main/binary-armhf/Packages"
   ],
  "lithium": [
-    "https://eu.pkg.bunsenlabs.org/debian/dists/lithium/main/binary-amd64/Packages",
-    "https://eu.pkg.bunsenlabs.org/debian/dists/lithium/main/binary-i386/Packages",
-    "https://eu.pkg.bunsenlabs.org/debian/dists/lithium/main/binary-armhf/Packages",
+    "https://pkg.bunsenlabs.org/debian/dists/lithium/main/binary-amd64/Packages",
+    "https://pkg.bunsenlabs.org/debian/dists/lithium/main/binary-i386/Packages",
+    "https://pkg.bunsenlabs.org/debian/dists/lithium/main/binary-armhf/Packages",
   ],
   "lithium-dev": [
     "https://kelaino.bunsenlabs.org/~johnraff/debian/dists/lithium/main/binary-amd64/Packages",
