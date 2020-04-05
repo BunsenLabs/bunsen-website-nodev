@@ -1,8 +1,4 @@
 [SigningKey]: <https://ddl.bunsenlabs.org/ddl/BunsenLabs-RELEASE.asc>
-[AptSources]: <https://pkg.bunsenlabs.org/templates/etc/apt/sources.list.d/bunsen.list>
-[AptSourcesBp]: <https://pkg.bunsenlabs.org/templates/etc/apt/sources.list.d/bunsen-jessie-backports.list>
-[DebianTree]: <https://pkg.bunsenlabs.org/debian/>
-
 
 ## Repositories
 
@@ -11,12 +7,12 @@ configuration and import our signing key.
 
 Add any applicable source entries to `/etc/apt/sources.list.d/bunsen.list`:
 
-|Maintained[^1] | Release(s)         | Repository | sources.list entry | Package index |
-|:---------:|:-------------------|:-----------|:-------------------|:-------------:|
-|     ✓     | Helium             |  helium     | `deb http://pkg.bunsenlabs.org/debian helium main` | [⬛](https://www.bunsenlabs.org/repoidx.html#helium) |
-|     ✓     | Helium             |stretch-backports     | `deb http://pkg.bunsenlabs.org/debian stretch-backports main` | [⬛](https://www.bunsenlabs.org/repoidx.html#stretch-backports) |
-|     ✓     | Hydrogen, Deuterium | jessie-backports     | `deb http://pkg.bunsenlabs.org/debian jessie-backports main` | [⬛](https://www.bunsenlabs.org/repoidx.html#jessie-backports) |
-|           | Hydrogen, Deuterium | bunsen-hydrogen     | `deb http://pkg.bunsenlabs.org/debian bunsen-hydrogen main` | [⬛](https://www.bunsenlabs.org/repoidx.html#bunsen-hydrogen) |
+|Maintained[^1] | Release(s)           | Repository         | sources.list entry                                              | Package index                           |
+|:-------------:|:---------------------|:-------------------|:----------------------------------------------------------------|:---------------------------------------:|
+|     ✓         | Helium               |  helium            | `deb http://pkg.bunsenlabs.org/debian helium main`              | [⬛](/repoidx.html#helium)              |
+|     ✓         | Helium               | stretch-backports  | `deb http://pkg.bunsenlabs.org/debian stretch-backports main`   | [⬛](/repoidx.html#stretch-backports)   |
+|     ✓         | Hydrogen, Deuterium  | jessie-backports   | `deb http://pkg.bunsenlabs.org/debian jessie-backports main`    | [⬛](/repoidx.html#jessie-backports)    |
+|               | Hydrogen, Deuterium  | bunsen-hydrogen    | `deb http://pkg.bunsenlabs.org/debian bunsen-hydrogen main`     | [⬛](/repoidx.html#bunsen-hydrogen)     |
 
 [^1]: This means that the distribution will receive updates if bugs are found
   (our own packages only) or new upstream releases are available (software
@@ -81,7 +77,7 @@ using the provided keyring package.
 
 ### Keyring package
 
-  1. [Select and download](https://www.bunsenlabs.org/repoidx.html?k=name-description&v=bunsen-keyring) the latest `bunsen-keyring` package for your
+  1. [Select and download](/repoidx.html?k=name-description&v=bunsen-keyring) the latest `bunsen-keyring` package for your
      distribution.
   2. Install the package:
 ~~~
