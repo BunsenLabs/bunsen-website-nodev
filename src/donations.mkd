@@ -33,7 +33,7 @@ and [terms of service](https://www.paypal.com/de/webapps/mpp/ua/legalhub-full).*
 Bitcoin donations may be made to the following address:
 
 <div class="emph">
-<center>[<monospace>1Cx6R3QVR7VfkXsfEDfyFVxSchGS85TE9W</monospace>](bitcoinaddress.txt)</center>
+<center>[<monospace>1EEXFX6eCDC1Q8Hs3af7wfZB4yJKkGdFFT</monospace>](bitcoinaddress.txt)</center>
 </div>
 
 ## DigitalOcean referral
