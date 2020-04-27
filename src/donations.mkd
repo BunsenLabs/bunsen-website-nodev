@@ -59,4 +59,4 @@ service](https://www.digitalocean.com/legal/terms/).*
 |:----------------------------------------------|:-------------------------------------------------------:|
 |Operating expenses estimate, p.a.              |<span id="d-yearly"></span>                              |
 |Reserve, 1.5a                                  |<span id="d-reserve"></span>                             |
-|Last update                                    |<span id="d-updated"></span>                             |
+|Last update of donation data                   |<span id="d-updated"></span>                             |
