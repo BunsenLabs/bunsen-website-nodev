@@ -130,7 +130,7 @@ deploy-local: build
 
 $(FAVICON_HEADER): $(FAVICON_SOURCE)
 	$(call LOG_STATUS,FAVICON,$(FAVICON_SIZES))
-	@./libexec/mkfavicons $< $(FAVICON_HEADER) $(FAVICON_SIZES) &>/dev/null
+	@./libexec/mkfavicons $< $(FAVICON_HEADER) $(FAVICON_SIZES) 2>/dev/null
 
 variables: src/installation.html src/index.html src/news.html
 	$(call LOG_STATUS,VARIABLES,$(notdir $^))
