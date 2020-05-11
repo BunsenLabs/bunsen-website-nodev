@@ -18,7 +18,7 @@
 * findutils
 * git
 * imagemagick
-* inkscape
+* inkscape (>=1.0)
 * GNU make
 * pandoc
 * python3 (>=3.6)
