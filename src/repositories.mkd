@@ -9,9 +9,11 @@ Add any applicable source entries to `/etc/apt/sources.list.d/bunsen.list`:
 
 |Maintained[^1] | Release(s)           | Repository         | sources.list entry                                              | Package index                           |
 |:-------------:|:---------------------|:-------------------|:----------------------------------------------------------------|:---------------------------------------:|
-|     ✓         | Helium               |  helium            | `deb http://pkg.bunsenlabs.org/debian helium main`              | [⬛](/repoidx.html#helium)              |
+|     ✓         | Lithium              | lithium            | `deb http://pkg.bunsenlabs.org/debian lithium main`             | [⬛](/repoidx.html#lithium)             |
+|     ✓         | Lithium              | buster-backports   | `deb http://pkg.bunsenlabs.org/debian buster-backports main`    | [⬛](/repoidx.html#buster-backports)    |
+|     ✓         | Helium               | helium             | `deb http://pkg.bunsenlabs.org/debian helium main`              | [⬛](/repoidx.html#helium)              |
 |     ✓         | Helium               | stretch-backports  | `deb http://pkg.bunsenlabs.org/debian stretch-backports main`   | [⬛](/repoidx.html#stretch-backports)   |
-|     ✓         | Hydrogen, Deuterium  | jessie-backports   | `deb http://pkg.bunsenlabs.org/debian jessie-backports main`    | [⬛](/repoidx.html#jessie-backports)    |
+|               | Hydrogen, Deuterium  | jessie-backports   | `deb http://pkg.bunsenlabs.org/debian jessie-backports main`    | [⬛](/repoidx.html#jessie-backports)    |
 |               | Hydrogen, Deuterium  | bunsen-hydrogen    | `deb http://pkg.bunsenlabs.org/debian bunsen-hydrogen main`     | [⬛](/repoidx.html#bunsen-hydrogen)     |
 
 [^1]: This means that the distribution will receive updates if bugs are found
