@@ -32,6 +32,11 @@ const BLDIST = {
     "https://pkg.bunsenlabs.org/debian/dists/stretch-backports/main/binary-i386/Packages",
     "https://pkg.bunsenlabs.org/debian/dists/stretch-backports/main/binary-armhf/Packages",
   ],
+  "buster-backports": [
+    "https://pkg.bunsenlabs.org/debian/dists/buster-backports/main/binary-amd64/Packages",
+    "https://pkg.bunsenlabs.org/debian/dists/buster-backports/main/binary-i386/Packages",
+    "https://pkg.bunsenlabs.org/debian/dists/buster-backports/main/binary-armhf/Packages",
+  ],
   "helium": [
     "https://pkg.bunsenlabs.org/debian/dists/helium/main/binary-amd64/Packages",
     "https://pkg.bunsenlabs.org/debian/dists/helium/main/binary-i386/Packages",
