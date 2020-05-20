@@ -243,10 +243,12 @@ function parse_Packages(Packages, distro) {
   let pkgi = null;
 
   let finalize_package = function() {
-    pkgi.url = DIST_BASE_URLS[distro] + pkgi.filename;
-    pkgi.source = DIST_BASE_URLS[distro] + pkgi.filename.replace(/\/[^/]+$/, "");
-    packages.set(pkgi.name, pkgi);
-    DIST_ALL_PKGS[pkgi.name] = distro;
+    if (pkgi) {
+      pkgi.url = DIST_BASE_URLS[distro] + pkgi.filename;
+      pkgi.source = DIST_BASE_URLS[distro] + pkgi.filename.replace(/\/[^/]+$/, "");
+      packages.set(pkgi.name, pkgi);
+      DIST_ALL_PKGS[pkgi.name] = distro;
+    }
   };
 
   for(let i = 0; i < lines.length; i++) {
