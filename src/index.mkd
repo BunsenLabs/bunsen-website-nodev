@@ -35,10 +35,11 @@ We offer combined [live-CD and installation
 media](/installation.html#installing-from-a-live-iso-image-cddvdusb-key) for the Debian
 **i386** (i686) and **amd64** (x86-64) architectures.
 
-However, you can install our [packages](/installation.html#package-based-install) also on ARM platforms.
-Our repository currently provides **[armhf](https://wiki.debian.org/ArmHardFloatPort)**.
-If you would like to see [another Debian ARM port](https://www.debian.org/ports/arm/) supported,
-file a request [here](https://forums.bunsenlabs.org/viewforum.php?id=13).
+However, you can install our [packages](/installation.html#package-based-install)
+on all supported Debian ports directly to bootstrap a BL desktop. Our main
+repository currently offers support for the amd64, i386, armhf (arm32v7) and
+arm64 (aarch64, arm64v8) Debian ports. Note that BL is tested thoroughly only
+on amd64 and i386, so your mileage may wary on more exotic architectures.
 
   </div>
   <div class="column">
