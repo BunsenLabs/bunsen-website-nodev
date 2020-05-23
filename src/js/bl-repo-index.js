@@ -474,7 +474,7 @@ function render_distro(p, distro, m) {
       const tr = Layout.tr(null, [
         Layout.td(arch),
         Layout.td(Math.ceil(parseFloat(pkg.arch[arch].size)/1024) + " kB"),
-        Layout.td(pkg.arch[arch].sha1)
+        Layout.td(pkg.arch[arch].sha1, { align: "left", "class": "checksum" }),
       ]);
 
       tr.onclick = () => { window.location = pkg.arch[arch].url; };

@@ -708,3 +708,7 @@ form#package-search {
   scrollbar-width: thin;
   scrollbar-color: #f6b620 #272822;
 }
+
+td.checksum {
+  font-family: "Ubuntu Mono", monospace;
+}
