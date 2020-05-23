@@ -46,6 +46,7 @@ const BLDIST = {
     "https://pkg.bunsenlabs.org/debian/dists/lithium/main/binary-amd64/Packages",
     "https://pkg.bunsenlabs.org/debian/dists/lithium/main/binary-i386/Packages",
     "https://pkg.bunsenlabs.org/debian/dists/lithium/main/binary-armhf/Packages",
+    "https://pkg.bunsenlabs.org/debian/dists/lithium/main/binary-arm64/Packages",
   ],
   "lithium-dev": [
     "https://kelaino.bunsenlabs.org/~johnraff/debian/dists/lithium/main/binary-amd64/Packages",
