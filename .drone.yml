@@ -8,4 +8,5 @@ steps:
     image: archlinux:latest
     commands:
       - pacman -Syu --noconfirm bash coreutils findutils git imagemagick inkscape make pandoc python python-beautifulsoup4 python-django python-feedparser python-yaml sed
+      - touch config/donations.csv
       - make build
