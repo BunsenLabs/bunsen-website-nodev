@@ -7,6 +7,6 @@ steps:
   - name: build
     image: archlinux:latest
     commands:
-      - pacman -Syu --noconfirm bash coreutils findutils git imagemagick inkscape make pandoc python python-beautifulsoup4 python-django python-feedparser python-yaml sed
+      - pacman -Syu --noconfirm bash coreutils findutils git imagemagick inkscape make pandoc python python-beautifulsoup4 python-django python-feedparser python-yaml sed rsync
       - touch config/donations.csv
       - make build
