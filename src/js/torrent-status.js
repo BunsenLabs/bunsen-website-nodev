@@ -30,17 +30,5 @@ function update_torrent_status() {
   });
 }
 
-function offer_webtorrent_download() {
-  nodelistwrap(document.querySelectorAll(".webtorrent-download"))
-    .forEach(node => {
-      const torrent_url = n.getAttribute("x-src");
-      n.textContent = "Download as WebTorrent";
-      n.addEventListener("onclick", event => {
-	const client = new WebTorrent(torrent_url, 
-      });
-    })
-}
-
 update_torrent_status();
 setInterval(update_torrent_status, 10000);
-offer_webtorrent_download();
