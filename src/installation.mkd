@@ -1,4 +1,3 @@
-[HardwareRequirements]: <https://www.debian.org/releases/buster/amd64/ch03s04.en.html>
 [LinuxFAQ]: <https://www.debian.org/CD/faq/#record-unix>
 [OSXFAQ]: <https://www.debian.org/CD/faq/#record-mac>
 [USBFAQ]: <https://www.debian.org/CD/faq/#write-usb>
@@ -22,14 +21,11 @@
 
 ## System requirements
 
-BunsenLabs is a Debian Stretch desktop with custom configurations and
-some additions. Hence, the [hardware
-recommendations][HardwareRequirements] from the Debian project apply for
-both 32bit and 64bit systems:
+The following requirements apply for both 32bit and 64bit systems:
 
 |RAM (minimum)|RAM (recommended)|Hard Drive (recommended) |
 |:-----------:|:---------------:|:---------:|
-| 256M        | 2G              | 10G       |
+| >= 1G       | >= 2G           | 20G       |
 
 Depending on the applications and feature set you decide to use
 (especially if you do not run a graphical desktop), the system may run
