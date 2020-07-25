@@ -400,17 +400,21 @@ hr {
   width: 20%;
 }
 
-main  a {
+main a {
   text-decoration: none;
-  color: #9b0c0c;
+  background-color: rgba(246, 182, 32, .1);
+  border-radius: 8px;
+  color: #003EEA;
 }
 
 main a:visited {
-  color: #9b0c0c;
+  color: #003EEA;
 }
 
-a:hover {
-  text-decoration: underline;
+main a:hover {
+  text-decoration: none;
+  background-color: rgba(246, 182, 32, .3);
+  color: #003EEA;
 }
 
 a.header, #TOC ul a {
