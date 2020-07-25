@@ -339,6 +339,10 @@ footer {
   border-bottom: 1px solid #ddd;
 }
 
+.toc a:hover {
+  text-decoration: underline;
+}
+
 .toc ul {
   margin-top:0;
   margin-bottom:0;
@@ -542,7 +546,7 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
 }
 
 #bl-repo-index .local-package {
-  color: #9b0c0c;
+  color: #003EEA
 }
 
 #bl-repo-index h3 {
