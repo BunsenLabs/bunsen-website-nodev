@@ -49,3 +49,13 @@ netcup® is the registered trademark of Felix Preuß.
 The OpenSans web font is licensed under the Apache License, version 2.0.
 
 The Roboto web font is licensed under the Apache License, version 2.0.
+
+The social media icons in the index leader are licensed as follows:
+
+  * The SVG speech bubble is a modified version of https://de.wikipedia.org/wiki/Datei:Speech_bubble.svg (PUBLIC DOMAIN)
+  * The unmodified but scaled SVG Github logo is used in agreement with the terms set forth by Github Inc. https://github.com/logos
+  * The SVG feed icon originates from here https://commons.wikimedia.org/wiki/File:Generic_Feed-icon.svg
+    and a modified form is used in agreement with the GNU GPL/LGPL. The modified source can be
+    freely downloaded and inspected by opening the media file from our website and clicking Save
+    as....
+  * The Twitter logo is mostly used in accordance with Twitter band guidelines set forth here https://about.twitter.com/content/dam/about-twitter/company/brand-resources/en_us/Twitter_Brand_Guidelines_V2_0.pdf. except we use a black version.
