@@ -20,10 +20,8 @@ ISO_32CD_SIZE              = 682M
 ISO_64_SIZE                = 1.28G
 
 DDL_URL_32                 = $(DDL_BASE_URL)/$(ISO_32)
-DDL_URL_32M                = https://kelaino.bunsenlabs.org/ddl/$(ISO_32)
 DDL_URL_32CD               = $(DDL_BASE_URL)/$(ISO_32CD)
 DDL_URL_64                 = $(DDL_BASE_URL)/$(ISO_64)
-DDL_URL_64M                = https://kelaino.bunsenlabs.org/ddl/$(ISO_64)
 
 SHA256SUMS = $(DDL_BASE_URL)/lithium-1.sha256sums.txt
 SHA256SUMS_URL_32CD        = $(SHA256SUMS)
@@ -41,10 +39,8 @@ GALLERY = $(file < include/index/gallery.html)
 
 RELEASE_SUBST :=             \
   DDL_URL_32                 \
-  DDL_URL_32M                \
   DDL_URL_32CD               \
   DDL_URL_64                 \
-  DDL_URL_64M                \
   GALLERY                    \
   GALLERY_NOSCRIPT           \
   ISO_32 ISO_64 ISO_32CD     \
