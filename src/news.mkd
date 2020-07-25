@@ -7,4 +7,9 @@ in order to view the news stream.
 </p>
 </div>
 </noscript>
+<div class="warning" id="error-message" style="display:none;">
+<p>
+There was an error fetching the news feed. Please try reloading the page to retry.
+</p>
+</div>
 <div class="news"></div>

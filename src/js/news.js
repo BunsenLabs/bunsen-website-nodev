@@ -1,4 +1,5 @@
 "use strict";
+
 function update_news() {
   fetch("https://www.bunsenlabs.org/feed/news")
     .then((resp) => {
@@ -31,6 +32,7 @@ function update_news() {
 
         anchor.appendChild(div);
       });
+
       let a = document.createElement("a");
       a.setAttribute("href", "https://forums.bunsenlabs.org/viewforum.php?id=12");
       a.textContent = "Older entries…";
@@ -40,6 +42,11 @@ function update_news() {
       h2.appendChild(a);
 
       anchor.appendChild(h2);
+    })
+    .catch(error => {
+      console.log("Failed to fetch news feed: " + error);
+      document.querySelector("#error-message").style.display = "block";
     });
 };
+
 update_news();
