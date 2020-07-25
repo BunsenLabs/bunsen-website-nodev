@@ -23,11 +23,11 @@ function update_torrent_status() {
     .forEach((n) => {
       const id = n.getAttribute("data-id");
       if(id in d.torrents) {
-	if(n.classList.contains("torrent-status-unknown")) {
-	  n.classList.add("torrent-status-active");
-	  n.classList.remove("torrent-status-unknown");
-	}
-	n.textContent = `${ d.torrents[id].s } seeders & ${ d.torrents[id].l } leechers`;
+        if(n.classList.contains("torrent-status-unknown")) {
+          n.classList.add("torrent-status-active");
+          n.classList.remove("torrent-status-unknown");
+        }
+        n.textContent = `${ d.torrents[id].s } seeders & ${ d.torrents[id].l } leechers`;
       }
     });
   });
