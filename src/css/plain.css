@@ -187,9 +187,9 @@ a.button, a.button:visited, a.button:hover {
 }
 
 a.button:hover {
-  background-color: #9b0c0c;
-  border: 1px solid #9b0c0c;
-  color: #f6f6f6!important;
+  background-color: rgba(246, 182, 32, .7);
+  border: 1px solid rgba(246, 182, 32, .7);
+  color: #272822;
 }
 
 .leader {
@@ -224,7 +224,7 @@ a.button:hover {
 img.linkbadge {
   height: 32px;
   padding: 12px 12px 12px 12px;
-  border-radius: 24px;
+  border-radius: 8px;
 }
 
 img.linkbadge:hover {
@@ -696,9 +696,8 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
     width:100%;
     margin-top:2ex;
   }
-  div.subleader > div.content-wrapper > div.row > a {
-    width:100%;
-    padding-bottom:2ex;
+  .subleader div.row {
+    flex-direction:row;
   }
   div.row p {
     padding-left:1em;
