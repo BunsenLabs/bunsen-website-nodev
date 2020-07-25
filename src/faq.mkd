@@ -56,10 +56,6 @@ This is because your IP address is on a IP block list. Please refer to
 the [Forums 403 FAQ](https://www.bunsenlabs.org/forums403.html) for more
 information and how to resolve this kind of problem.
 
-## What software does BL run on?
-
-Here is a [list](/stuffweuse.html).
-
 ## How can I get my desktop to look like the ones on the front page's slide show?
 
 You can start by tracking down the original posts on our forums and
