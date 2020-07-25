@@ -11,8 +11,8 @@ Add any applicable source entries to `/etc/apt/sources.list.d/bunsen.list`:
 |:-------------:|:---------------------|:-------------------|:----------------------------|:----------------------------------------------------------------|:---------------------------------------:|
 |     ✓         | Lithium              | lithium            | amd64, i386, armhf, arm64   | `deb http://pkg.bunsenlabs.org/debian lithium main`             | [⬛](/repoidx.html#lithium)             |
 |     ✓         | Lithium              | buster-backports   | amd64, i386                 | `deb http://pkg.bunsenlabs.org/debian buster-backports main`    | [⬛](/repoidx.html#buster-backports)    |
-|     ✓         | Helium               | helium             |                             | `deb http://pkg.bunsenlabs.org/debian helium main`              | [⬛](/repoidx.html#helium)              |
-|     ✓         | Helium               | stretch-backports  |                             | `deb http://pkg.bunsenlabs.org/debian stretch-backports main`   | [⬛](/repoidx.html#stretch-backports)   |
+|               | Helium               | helium             |                             | `deb http://pkg.bunsenlabs.org/debian helium main`              | [⬛](/repoidx.html#helium)              |
+|               | Helium               | stretch-backports  |                             | `deb http://pkg.bunsenlabs.org/debian stretch-backports main`   | [⬛](/repoidx.html#stretch-backports)   |
 |               | Hydrogen, Deuterium  | jessie-backports   |                             | `deb http://pkg.bunsenlabs.org/debian jessie-backports main`    | [⬛](/repoidx.html#jessie-backports)    |
 |               | Hydrogen, Deuterium  | bunsen-hydrogen    |                             | `deb http://pkg.bunsenlabs.org/debian bunsen-hydrogen main`     | [⬛](/repoidx.html#bunsen-hydrogen)     |
 
