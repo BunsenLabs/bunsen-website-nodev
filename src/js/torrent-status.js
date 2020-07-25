@@ -19,12 +19,15 @@ function update_torrent_status() {
     return response.json();
   })
   .then(d => {
-    nodelistwrap(document.querySelectorAll(".torrent-status"))
+    nodelistwrap(document.querySelectorAll("p.torrent-status"))
     .forEach((n) => {
-      const id = n.getAttribute("id");
+      const id = n.getAttribute("data-id");
       if(id in d.torrents) {
-	n.textContent = `⬆${ d.torrents[id].s } ⬇${ d.torrents[id].l }`;
-	if (n.style.display != "block") n.style.display = "block";
+	if(n.classList.contains("torrent-status-unknown")) {
+	  n.classList.add("torrent-status-active");
+	  n.classList.remove("torrent-status-unknown");
+	}
+	n.textContent = `${ d.torrents[id].s } seeders & ${ d.torrents[id].l } leechers`;
       }
     });
   });

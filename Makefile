@@ -157,6 +157,7 @@ src/installation.html: src/installation.mkd $(TEMPLATE) $(wildcard include/insta
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
 	@pandoc $(ARGV) $(PANDOC_VARS) \
 			-A include/installation/after.html \
+			-B include/installation/leader.html \
 			-o $@ $<
 	@./libexec/postproc $@
 

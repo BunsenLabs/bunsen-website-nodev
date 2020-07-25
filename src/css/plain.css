@@ -186,6 +186,53 @@ a.button, a.button:visited, a.button:hover {
   max-width: 175px;
 }
 
+a.download-button, a.download-button:hover {
+  border: 1px solid rgba(246, 182, 32, .7);
+  background-color: rgba(246, 182, 32, .7);
+  border-radius: 4px;
+  padding: 8px;
+  text-decoration:none;
+  width: 75%;
+  display: inline-block;
+  max-width: 175px;
+  min-width: 175px;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: #272822;
+  font-weight: 500;
+}
+
+span.bold-accent {
+  font-weight: 500;
+  color: #003EEA;
+}
+
+a.download-button.blue, a.download-button.blue:hover {
+  border: 1px solid rgba(0, 62, 234, 0.3);
+  background-color: rgba(0, 62, 234, 0.3);
+}
+
+a.download-button.blue:hover {
+  border: 1px solid #272822;
+}
+
+a.download-button.grey, a.download-button.grey:hover {
+  border: 1px solid rgba(62, 62, 62, 0.3);
+  background-color: rgba(62, 62, 62, 0.3);
+}
+
+a.download-button.grey:hover {
+  border: 1px solid #272822;
+}
+
+.center-column {
+  justify-content: center;
+}
+
+a.download-button:hover {
+  border: 1px solid #272822;
+}
+
 a.button:hover {
   background-color: rgba(246, 182, 32, .7);
   border: 1px solid rgba(246, 182, 32, .7);
@@ -602,10 +649,14 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
   padding: 0 4px 0 4px;
 }
 
-.torrent-status {
-  display:none;
-  font-family:"Ubuntu Mono";
-  color:#6f6f6f;
+p.torrent-status {}
+
+p.torrent-status-unknown {
+  color: grey;
+}
+
+p.torrent-status-active {
+  color: #00aa00;
 }
 
 .subtitle {
