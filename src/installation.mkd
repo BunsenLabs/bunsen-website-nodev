@@ -70,8 +70,9 @@ signature to verify any download[^3].
 | \@\@RELEASE_CODENAME\@\@ / amd64<br><span class="subtitle">\@\@ISO_64\@\@</span>          |\@\@ISO\_64\_SIZE\@\@  |[⬛][TorrentFile64]<span title="⬆: Seeders ⬇: Leechers" class="torrent-status" id="@@ISO_64_TORRENTHASH@@"></span>     |[⬛][DDL64]     |[⬛][shasums64]   |[⬛][pgp64]       |
 | \@\@RELEASE_CODENAME\@\@ / i386, CD size<br><span class="subtitle">\@\@ISO_32CD\@\@</span> |\@\@ISO\_32CD\_SIZE\@\@|[⬛][TorrentFile32CD]<span title="⬆: Seeders ⬇: Leechers" class="torrent-status" id="@@ISO_32CD_TORRENTHASH@@"></span> |[⬛][DDL32CD]   |[⬛][shasums32CD] |[⬛][pgp32CD]     |
 
-For archived releases, click [here](https://ddl.bunsenlabs.org/ddl/Archive). We
-last updated our ISOs with current packages on \@\@RELEASE_DATE\@\@.
+Last ISO update: \@\@RELEASE_DATE\@\@
+
+For archived releases, click [here](https://ddl.bunsenlabs.org/ddl/Archive).
 
 There is a [section](https://forums.bunsenlabs.org/viewforum.php?id=14)
 on the forums which deals with any issues, bugs and comments related to
