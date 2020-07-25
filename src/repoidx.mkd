@@ -49,7 +49,7 @@ repository. Without JavaScript, this page stays empty.
 
 <p>
 Allow scripts originating from the <span class="semibold">bunsenlabs.org</span> domain to run, or <a
-href="/debian">view the directory index instead</a>.
+href="https://pkg.bunsenlabs.org/debian">view the directory index instead</a>.
 </p>
 
 <p>
