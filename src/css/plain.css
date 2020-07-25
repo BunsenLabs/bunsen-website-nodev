@@ -268,12 +268,21 @@ footer {
 }
 
 .footer-sponsor {
-  float:left;
-  margin-left:2ex;
+  float:right;
+  margin-right:2ex;
 }
 
 .footer-sponsor img {
   height:6ex;
+}
+
+.footer-debian {
+  float:left;
+  margin-left: 2ex;
+}
+
+.footer-debian img {
+  height: 6ex;
 }
 
 .footer-row a:hover {
