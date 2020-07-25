@@ -1,4 +1,0 @@
-Django
-PyYAML>=5.1
-beautifulsoup4
-feedparser>=5.2.1
