@@ -202,13 +202,33 @@ a.button:hover {
   font-family: "Roboto";
 }
 
+.subleader {
+  padding:1ex 0 1ex 0;
+  background-color: #f6f6f6;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  color: #272822;
+  font-size: 2ex;
+  font-family: "Roboto";
+}
+
 .leader p {
   line-height: 1.5;
 }
 
-.leader a, .leader a:visited {
+.leader a, .leader a:visited, .subleader a, .subleader a:visited {
   text-decoration:none;
   color:#272822;
+}
+
+img.linkbadge {
+  height: 32px;
+  padding: 12px 12px 12px 12px;
+  border-radius: 24px;
+}
+
+img.linkbadge:hover {
+  background-color: rgba(246, 182, 32, .7);
 }
 
 span.indexheader {
@@ -675,6 +695,10 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
   div.row a.button {
     width:100%;
     margin-top:2ex;
+  }
+  div.subleader > div.content-wrapper > div.row > a {
+    width:100%;
+    padding-bottom:2ex;
   }
   div.row p {
     padding-left:1em;
