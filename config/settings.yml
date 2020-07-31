@@ -1,6 +1,8 @@
 ---
 gallery:
   - author: BunsenLabs
+    base: lithium2
+  - author: BunsenLabs
     base: Helium_Beam
     source: https://github.com/BunsenLabs/bunsen-utilities/blob/helium/blob/Helium_Beam.jpg
   - author: BunsenLabs

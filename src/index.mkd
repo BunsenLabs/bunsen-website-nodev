@@ -11,8 +11,9 @@ installed on top of Debian. There are no changes to the way the Debian
 base system is administrated.
 
 * Pre-configured [Openbox](http://openbox.org/wiki/Main_Page) window
-  manager with [tint2](https://gitlab.com/o9000/tint2) panel and
-  [conky](http://conky.sourceforge.net/) system monitor
+  manager with [tint2](https://gitlab.com/o9000/tint2) panel,
+  [conky](http://conky.sourceforge.net/) system monitor and
+  [jgmenu](https://github.com/johanmalm/jgmenu), a flexible replacement desktop menu.
 * Assortment of harmonising GTK2/3 themes, wallpapers and
   [conky](https://github.com/brndnmtthws/conky) configurations
 * Various configuration and application utilities to maintain this
@@ -31,15 +32,16 @@ what kind and style of desktop experience you may end up with.
 
 ## Architectures
 
-We offer combined [live-CD and installation
-media](/installation.html#installing-from-a-live-iso-image-cddvdusb-key) for the Debian
-**i386** (i686) and **amd64** (x86-64) architectures.
+We offer combined [live-CD and installation media](/installation.html) for the Debian
+**amd64** (x86-64) architectures and **i386** (i686) architectures.
 
-However, you can install our [packages](/installation.html#package-based-install)
-on all supported Debian ports directly to bootstrap a BL desktop. Our main
-repository currently offers support for the amd64, i386, armhf (arm32v7) and
-arm64 (aarch64, arm64v8) Debian ports. Note that BL is tested thoroughly only
-on amd64 and i386, so your mileage may wary on more exotic architectures.
+The main focus is on the DVD-sized amd64 ISO, it comes fully featured. The CD-sized i386 ISO is a
+slimmed down version meant to support older computers, but can after installation be expanded to
+include all features.
+
+Our main repository currently offers support for
+the amd64, i386, armhf (arm32v7) and arm64 (aarch64, arm64v8) Debian ports. Note that BL is tested
+thoroughly only on amd64 and i386, so your mileage may wary on more exotic architectures.
 
   </div>
   <div class="column">

@@ -202,9 +202,13 @@ a.download-button, a.download-button:hover {
   font-weight: 500;
 }
 
-span.bold-accent {
+.bold-accent, .leader a.bold-accent, .leader a.bold-accent:visited {
   font-weight: 500;
   color: #003EEA;
+}
+
+.leader a.bold-accent, .leader a.bold-accent:visited {
+  text-decoration: underline;
 }
 
 a.download-button.blue, a.download-button.blue:hover {

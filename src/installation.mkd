@@ -34,18 +34,17 @@ approximately 2.1G of space on the hard drive.
 
 ## Installing from a live ISO image (CD/DVD/USB key)
 
-This is the preferred and officially supported installation method. You
-first download a so-called hybrid ISO image which, depending on size, is
-suitable for writing to a CD/DVD medium or a USB key drive. Then, after
-booting from the installation medium, you have the chance to test the
-Bunsen desktop and install the system to your computer.
+Download the ISO image that fits your use case from the link section at the top of the page.
+Installing from a live ISO image booted off of a burnt DVD/CD or USB key is the preferred and fully
+supported way of installing the BunsenLabs Linux distribution.
 
-After downloading the ISO file from one of the sources below, you may
-find help with burning the file to disk or writing to a USB key in the
-Debian FAQ section:
+  * You first download a so-called hybrid ISO image which, depending on size, is suitable for writing to a CD/DVD medium or a USB key drive.
+  * Then, after booting from the installation medium, you have the chance to test the Bunsen desktop and install the system to your computer.
+
+You may find help with burning the file to disk or writing to a USB key in the Debian FAQ section:
 
 * How to write an ISO image under [Linux/Unix][LinuxFAQ],
-  [Windows][WindowsFAQ] or [Mac OS X][OSXFAQ]?
+  [Windows][WindowsFAQ] or [macOS][OSXFAQ]?
 * [How to write a CD/DVD/BD image to a USB flash drive][USBFAQ]?
 
 <div class="info">
@@ -53,35 +52,27 @@ To log in after booting the live session, enter the username **user** and
 the password **live**.
 </div>
 
-## Downloads
-
-If you can use BitTorrent, please do so as to keep load off our server.
-If possible, please leave the client open for a while so you can seed
-the files for other users. Via BitTorrent, you will also be able to
-download significantly faster -- especially if you are not in Europe
-where our servers are located.
-
-Otherwise, use the direct download links. Do not forget to verify direct
-downloads using the checksum file provided[^2]. Use the provided OpenPGP
-signature to verify any download[^3].
-
-| Release / architecture                                                  |Size                   |.torrent                                                                                                               |https           |SHA-256           |PGP .sig          |
-|:------------------------------------------------------------------------|:---------------------:|:---------------------------------------------------------------------------------------------------------------------:|:--------------:|:----------------:|:----------------:|
-| \@\@RELEASE_CODENAME\@\@ / amd64<br><span class="subtitle">\@\@ISO_64\@\@</span>          |\@\@ISO\_64\_SIZE\@\@  |[⬛][TorrentFile64]<span title="⬆: Seeders ⬇: Leechers" class="torrent-status" id="@@ISO_64_TORRENTHASH@@"></span>     |[⬛][DDL64]     |[⬛][shasums64]   |[⬛][pgp64]       |
-| \@\@RELEASE_CODENAME\@\@ / i386, CD size<br><span class="subtitle">\@\@ISO_32CD\@\@</span> |\@\@ISO\_32CD\_SIZE\@\@|[⬛][TorrentFile32CD]<span title="⬆: Seeders ⬇: Leechers" class="torrent-status" id="@@ISO_32CD_TORRENTHASH@@"></span> |[⬛][DDL32CD]   |[⬛][shasums32CD] |[⬛][pgp32CD]     |
-
-Last ISO update: \@\@RELEASE_DATE\@\@
-
-For archived releases, click [here](https://ddl.bunsenlabs.org/ddl/Archive).
-
 There is a [section](https://forums.bunsenlabs.org/viewforum.php?id=14)
 on the forums which deals with any issues, bugs and comments related to
-the current release.
+the current release, should you find or have one.
 
-[^2]: Place the file containing the checksums in the same directory as
+### Verifying the integrity of your download
+
+It is highly recommended to verify the integrity of any downloaded ISO file. This ensures that the
+image is not corrupted, and that the image has not been altered.
+
+There are two ways to verify the ISO file:
+
+  * If you have downloaded the image from our SSL-secured website, you can quickly verify the
+    integrity of the downloaded ISO file by comparing its SHA-256 checkum to the one published
+    above. Download the checksum file using the respective *SHA256 checksum* buttons above, then
+    compare the checksum contained therein with the checksum of the file you downloaded.
+
+Place the file containing the checksums in the same directory as
 your ISO file downloads, and then run in a terminal `sha256sum --check
 ${CHECKSUM_FILE}`. Make sure to pass the name of the `*.sha256sum.txt`
 file, and **not** the ISO file!
+
 
 [^3]: We use our [release key][releasekey] for signing. Import the key
 into your local user's keyring by executing `gpg --import <(wget -qO-
@@ -93,11 +84,10 @@ a 'good signature'.
 
 ## Package-based install
 
-You may also choose to follow our repository set-up
-[instructions](https://www.bunsenlabs.org/repositories.html) and include our package
-repository into your existing Debian system. This way, you can
-selectively install [packages from the BunsenLabs project](https://www.bunsenlabs.org/repoidx.html?k=name-description&v=bunsen-)
-and use only a subset of our configurations and assets.
+You may also choose to follow our repository set-up [instructions](/repositories.html) and include
+our package repository into your existing Debian system. This way, you can selectively install
+[packages from the BunsenLabs project](/repoidx.html?k=name-description&v=bunsen-) and use only a
+subset of our configurations and assets.
 
 The **\@\@RELEASE_CODENAME\@\@** packages are made to be installed on the latest Debian release,
 currently Debian \@\@RELEASE_VERSION\@\@.
