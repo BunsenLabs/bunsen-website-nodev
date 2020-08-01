@@ -72,7 +72,7 @@ above.
 Execute the following shell commands in the directory you've downloaded the ISO file(s) to:
 
 ```sh
-CHECKSUMS=$(curl -Ls https://ddl.bunsenlabs.org/ddl/lithium-1.sha256sums.txt)
+CHECKSUMS=$(curl -Ls @@SHA256SUMS_URL_64@@)
 printf "%s\n" "$CHECKSUMS" | sha256sum -c --ignore-missing
 
 ```
