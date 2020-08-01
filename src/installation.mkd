@@ -91,11 +91,3 @@ subset of our configurations and assets.
 
 The **\@\@RELEASE_CODENAME\@\@** packages are made to be installed on the latest Debian release,
 currently Debian \@\@RELEASE_VERSION\@\@.
-
-## Netinstall script
-
-It is also possible to include the BunsenLabs system into a minimal
-[netinstall](https://www.debian.org/CD/netinst/) Debian installation
-using a special script. Please consult its
-[README](https://github.com/BunsenLabs/bunsen-netinstall) for detailed
-instructions.
