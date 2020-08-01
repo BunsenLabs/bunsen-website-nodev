@@ -56,31 +56,48 @@ There is a [section](https://forums.bunsenlabs.org/viewforum.php?id=14)
 on the forums which deals with any issues, bugs and comments related to
 the current release, should you find or have one.
 
-### Verifying the integrity of your download
+## Verifying the integrity of your download
 
 It is highly recommended to verify the integrity of any downloaded ISO file. This ensures that the
 image is not corrupted, and that the image has not been altered.
 
 There are two ways to verify the ISO file:
 
-  * If you have downloaded the image from our SSL-secured website, you can quickly verify the
-    integrity of the downloaded ISO file by comparing its SHA-256 checkum to the one published
-    above. Download the checksum file using the respective *SHA256 checksum* buttons above, then
-    compare the checksum contained therein with the checksum of the file you downloaded.
+### Using checksums
 
-Place the file containing the checksums in the same directory as
-your ISO file downloads, and then run in a terminal `sha256sum --check
-${CHECKSUM_FILE}`. Make sure to pass the name of the `*.sha256sum.txt`
-file, and **not** the ISO file!
+If you have downloaded the image from our SSL-secured website, you can quickly verify the
+integrity of the downloaded ISO file by comparing its SHA-256 checkum to the one published
+above.
+
+Execute the following shell commands in the directory you've downloaded the ISO file(s) to:
+
+```sh
+CHECKSUMS=$(curl -Ls https://ddl.bunsenlabs.org/ddl/lithium-1.sha256sums.txt)
+printf "%s\n" "$CHECKSUMS" | sha256sum -c --ignore-missing
+
+```
+
+Alternatively, download the SHA-256 checksum file manually using the [links at the top of this
+page](#), and compute and compare the checksum using a tool of your choosing.
+
+### Using PGP signatures
+
+We use our [PGP release key][releasekey] to sign our images. Each downloaded ISO file can be
+verified using the key and the signature file.
+
+Import the key into your local user's keyring by executing
+```sh
+gpg --import <(curl -Ls https://ddl.bunsenlabs.org/ddl/BunsenLabs-RELEASE.asc)
+```
+
+Verify the signature by downloading both the ISO file and the signature file to the
+same directory using the [links at the top of this page](#), and invoking GnuPG as follows
+```sh
+gpg --verify SIGNATURE_FILE ISO_FILE
+```
+GnuPG should tell you that the file has a 'good' signature.
 
 
-[^3]: We use our [release key][releasekey] for signing. Import the key
-into your local user's keyring by executing `gpg --import <(wget -qO-
-https://ddl.bunsenlabs.org/ddl/BunsenLabs-RELEASE.asc)`.  Verify the
-signature by downloading both the ISO file and the signature file to the
-same directory and invoking GnuPG as follows: `gpg --verify
-${SIGNATURE_FILE} ${ISO_FILE}`. GnuPG should tell you that you passed it
-a 'good signature'.
 
 ## Package-based install
 
