@@ -730,7 +730,7 @@ p.torrent-status-active {
   .nav-row a, .nav-row a:visited {
     width:100%;
   }
-  .footer-sponsor {
+  .footer-sponsor, .footer-debian {
     display:none;
   }
   span.pkg-version, span.pkg-count, span.distro-modification-date {
