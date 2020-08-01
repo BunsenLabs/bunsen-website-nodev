@@ -41,7 +41,7 @@ include all features.
 
 Our main repository currently offers support for
 the amd64, i386, armhf (arm32v7) and arm64 (aarch64, arm64v8) Debian ports. Note that BL is tested
-thoroughly only on amd64 and i386, so your mileage may wary on more exotic architectures.
+thoroughly only on amd64 and i386, so your mileage may wary on other architectures.
 
   </div>
   <div class="column">
