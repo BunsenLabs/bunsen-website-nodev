@@ -34,7 +34,7 @@ approximately 2.1G of space on the hard drive.
 
 ## Installing from a live ISO image (CD/DVD/USB key)
 
-Download the ISO image that fits your use case from the link section at the top of the page.
+Download the ISO image that fits your use case from the [link section at the top of the page](#leader).
 Installing from a live ISO image booted off of a burnt DVD/CD or USB key is the preferred and fully
 supported way of installing the BunsenLabs Linux distribution.
 
@@ -78,7 +78,7 @@ printf "%s\n" "$CHECKSUMS" | sha256sum -c --ignore-missing
 ```
 
 Alternatively, download the SHA-256 checksum file manually using the [links at the top of this
-page](#), and compute and compare the checksum using a tool of your choosing.
+page](#leader), and compute and compare the checksum using a tool of your choosing.
 
 ### Using PGP signatures
 
@@ -91,7 +91,7 @@ gpg --import <(curl -Ls https://ddl.bunsenlabs.org/ddl/BunsenLabs-RELEASE.asc)
 ```
 
 Verify the signature by downloading both the ISO file and the signature file to the
-same directory using the [links at the top of this page](#), and invoking GnuPG as follows
+same directory using the [links at the top of this page](#leader), and invoking GnuPG as follows
 ```sh
 gpg --verify SIGNATURE_FILE ISO_FILE
 ```
