@@ -54,8 +54,10 @@ and assistance in dealing with every configuration aspect of the BL
 distribution, and is the main platform for user-to-user support as well
 as the place to voice suggestions and report bugs.
 
-There are a few independent communities, see [here for a list](https://www.bunsenlabs.org/faq.html#independent-channels).
+We have quite a few specialty threads, like the [Conky weather+moon
+scripts](https://forums.bunsenlabs.org/viewtopic.php?id=189) thread.
 
+There are a few independent communities, see [here for a list](https://www.bunsenlabs.org/faq.html#independent-channels).
 </div>
 </div>
 
