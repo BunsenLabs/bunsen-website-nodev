@@ -210,6 +210,11 @@ a.download-button, a.download-button:hover {
   font-weight: 500;
 }
 
+.frontpage a.download-button {
+  margin-top: 1.5ex;
+  margin-bottom: 1.5ex;
+}
+
 .bold-accent, .leader a.bold-accent, .leader a.bold-accent:visited {
   font-weight: 500;
   color: #003EEA;
