@@ -27,7 +27,7 @@ function update_torrent_status() {
           n.classList.add("torrent-status-active");
           n.classList.remove("torrent-status-unknown");
         }
-        n.textContent = `${ d.torrents[id].s } seeders & ${ d.torrents[id].l } leechers`;
+        n.textContent = `${ d.torrents[id].s } seeders | ${ d.torrents[id].l } leechers`;
       }
     });
   });
