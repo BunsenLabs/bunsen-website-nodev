@@ -1,0 +1,15 @@
+These reviews were once linked to on the frontpage, but have been moved here, as they are now quite
+a bit older.
+
+* 2017: DistroWatch, *[Reader supplied reviews for BunsenLabs Linux](https://distrowatch.com/dwres.php?resource=ratings&distro=bunsenlabs)*
+* 2016-10/11: LinuxWelt, printed edition 10-11/2016, there is a one-page review on page 34
+* 2016-07-29: LinuxWelt, 5/2016: [BunsenLabs is featured on the accompanying DVD](http://www.pcwelt.de/news/LinuxWelt-5-2016-jetzt-am-Kiosk-10016907.html)
+* 2016-06-13: DistroWatch Weekly, Issue 665: *[Review: BunsenLabs Linux](https://distrowatch.com/weekly.php?issue=20160613#bunsen)*
+* 2016-05-02: DistroWatch: [BunsenLabs Linux entry](https://distrowatch.com/table.php?distribution=bunsenlabs)
+* 2016-02-19: LINUX.COM: *[5 Linux Desktop Distributions You Should Kow](http://www.linux.com/learn/tutorials/886407-5-live-linux-desktop-distributions-you-should-know)*
+* 2016-01: Ubuntu User, Spring 2016: *[BunsenLabs Hydrogen – CrunchBang's lightweight successor](https://www.ubuntu-user.com/Magazine/Archive/2016/28/BunsenLabs-Hydrogen-CrunchBang-s-lightweight-successor)*
+* 2016-01-21: LinuxUser 02/2016: *[Bunsenbrenner: BunsenLabs "Hydrogen" auch für ältere Hardware](http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2016/02/Bunsenbrenner)*
+* 2015-12-07: Linux Insider: *[Hot New BunsenLabs Linux Eases Pain of CrunchBang Loss](http://www.linuxinsider.com/story/82837.html?rss=1)*
+* 2015-11-15: Sunday Morning Linux Review, Episode 167: *[BunsenLabs Linux](http://smlr.us/?p=4833/)*
+* 2015-09-21: DistroWatch Weekly, Issue 628: *[New Linux distributions](http://distrowatch.com/weekly.php?issue=20150921#waiting)*
+* 2015-06-21: entornos GNU/Linux: *[Un pasno por BunsenLabs GNU/Linux 8.1 (Hydrogen)](http://entornosgnulinux.com/2015/06/21/un-paseo-por-bunsenlabs-gnulinux-8-1-hydrogen/)*

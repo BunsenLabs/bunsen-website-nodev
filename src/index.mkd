@@ -61,8 +61,13 @@ There are a few independent communities, see [here for a list](https://www.bunse
 
 ## Reviews and press
 
-There is a long [forum thread](https://forums.bunsenlabs.org/viewtopic.php?id=763) for collecting quality reviews.
+Please see this [forum thread](https://forums.bunsenlabs.org/viewtopic.php?id=763) for more links to
+reviews. The list below is pretty much just a random selection.
 
+* 2020-06-09: *[The Little Distro That Could](https://linuxunplugged.com/357)*
+* 2020-02-13: *[リリース間近な BunsenLabs Lithium テスト版をインストールしてみました。](https://ameblo.jp/gokurakuhaze/entry-12573231482.html)*
+* 2019-12-07: *[Here are the 5 Lightweight Linux Distributions We Recommend](https://fosspost.org/lists/lightweight-linux-distributions)*
+* 2018-12-22: *[BunsenLabs Linux | Review from an openSUSE User](https://cubiclenate.com/2018/12/22/bunsenlabs-linux-review-from-an-opensuse-user/)*
 * 2018-09-29: c't 21/2018, page 122 and online: *[Revival - Alte Hardware mit Linux wiederbeleben](https://www.heise.de/select/ct/2018/21/1539312557450435)*
 * 2018-08-26: ordinatechnic.com: *[BunsenLabs Helium Review](https://www.ordinatechnic.com/distro-reviews/BunsenLabs/bunsenlabs-helium-review)*
 * 2018-06-25: DistroWatch Weekly, Issue 769: *[Review: BunsenLabs Helium](https://www.distrowatch.com/weekly.php?issue=20180625#bunsenlabs)*
@@ -71,15 +76,5 @@ There is a long [forum thread](https://forums.bunsenlabs.org/viewtopic.php?id=76
 * 2017-04-28: ghacks.net, *[A look at Desktop Environments: Openbox Window Manager](https://www.ghacks.net/2017/04/28/a-look-at-desktop-environments-openbox-window-manager/)*
 * 2017-03-28: Video review in Portuguese: *[BunsenLabs Linux - Apresentação e Configurações iniciais](https://www.youtube.com/watch?v=HoNKPopVpbw)*
 * 2017-01: Linux Format, printed issue 219, there is a review of several lightweight distros including BunsenLabs on [pages 29f](https://www.myfavouritemagazines.co.uk/computer/linux-format-magazine-back-issues/linux-format-january-2017-issue-219/).
-* 2017: DistroWatch, *[Reader supplied reviews for BunsenLabs Linux](https://distrowatch.com/dwres.php?resource=ratings&distro=bunsenlabs)*
-* 2016-10/11: LinuxWelt, printed edition 10-11/2016, there is a one-page review on page 34
-* 2016-07-29: LinuxWelt, 5/2016: [BunsenLabs is featured on the accompanying DVD](http://www.pcwelt.de/news/LinuxWelt-5-2016-jetzt-am-Kiosk-10016907.html)
-* 2016-06-13: DistroWatch Weekly, Issue 665: *[Review: BunsenLabs Linux](https://distrowatch.com/weekly.php?issue=20160613#bunsen)*
-* 2016-05-02: DistroWatch: [BunsenLabs Linux entry](https://distrowatch.com/table.php?distribution=bunsenlabs)
-* 2016-02-19: LINUX.COM: *[5 Linux Desktop Distributions You Should Kow](http://www.linux.com/learn/tutorials/886407-5-live-linux-desktop-distributions-you-should-know)*
-* 2016-01: Ubuntu User, Spring 2016: *[BunsenLabs Hydrogen – CrunchBang's lightweight successor](https://www.ubuntu-user.com/Magazine/Archive/2016/28/BunsenLabs-Hydrogen-CrunchBang-s-lightweight-successor)*
-* 2016-01-21: LinuxUser 02/2016: *[Bunsenbrenner: BunsenLabs "Hydrogen" auch für ältere Hardware](http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2016/02/Bunsenbrenner)*
-* 2015-12-07: Linux Insider: *[Hot New BunsenLabs Linux Eases Pain of CrunchBang Loss](http://www.linuxinsider.com/story/82837.html?rss=1)*
-* 2015-11-15: Sunday Morning Linux Review, Episode 167: *[BunsenLabs Linux](http://smlr.us/?p=4833/)*
-* 2015-09-21: DistroWatch Weekly, Issue 628: *[New Linux distributions](http://distrowatch.com/weekly.php?issue=20150921#waiting)*
-* 2015-06-21: entornos GNU/Linux: *[Un pasno por BunsenLabs GNU/Linux 8.1 (Hydrogen)](http://entornosgnulinux.com/2015/06/21/un-paseo-por-bunsenlabs-gnulinux-8-1-hydrogen/)*
+
+[Archive of older reviews](/older-reviews.html).
