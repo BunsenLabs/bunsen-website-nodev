@@ -13,7 +13,7 @@ base system is administrated.
 * Pre-configured [Openbox](http://openbox.org/wiki/Main_Page) window
   manager with [tint2](https://gitlab.com/o9000/tint2) panel,
   [conky](http://conky.sourceforge.net/) system monitor and
-  [jgmenu](https://github.com/johanmalm/jgmenu), a flexible replacement desktop menu.
+  [jgmenu](https://github.com/johanmalm/jgmenu), a featureful desktop menu.
 * Assortment of harmonising GTK2/3 themes, wallpapers and
   [conky](https://github.com/brndnmtthws/conky) configurations
 * Various configuration and application utilities to maintain this
