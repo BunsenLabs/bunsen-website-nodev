@@ -61,8 +61,8 @@ There are a few independent communities, see [here for a list](https://www.bunse
 
 ## Reviews and press
 
-Please see this [forum thread](https://forums.bunsenlabs.org/viewtopic.php?id=763) for more links to
-reviews. The list below is pretty much just a random selection.
+Please see this [forum thread](https://forums.bunsenlabs.org/viewtopic.php?id=763) for more reviews.
+The list below is pretty much just a random selection.
 
 * 2020-06-09: *[The Little Distro That Could](https://linuxunplugged.com/357)*
 * 2020-02-13: *[リリース間近な BunsenLabs Lithium テスト版をインストールしてみました。](https://ameblo.jp/gokurakuhaze/entry-12573231482.html)*
