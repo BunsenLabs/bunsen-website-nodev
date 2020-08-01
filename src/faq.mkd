@@ -3,6 +3,7 @@
 ### Official channels
 
   * [Forums](https://forums.bunsenlabs.org) -- this is our main communication channel
+  * [Twitter](https://twitter.com/realbunsenlabs) -- this largely reposts our [RSS news feed](/news.html)
 
 As you may know, we had been using the [CrunchBang Linux forums](http://crunchbang.org/forums)
 in the beginning. Registrations over there are now closed, but there's
@@ -11,15 +12,14 @@ much knowledge left for you to harvest.
 You can also consume our [News & Announcement](https://forums.bunsenlabs.org/viewforum.php?id=12)
 news feed via [Planet Debian](http://planet.debian.org/deriv/).
 
-### Independent channels
+### Community channels
 
-Unofficial pages have also sprung up elsewhere:
-
-* IRC channel [#bunsenlabs@freenode](irc://chat.freenode.net:6697/#bunsenlabs)
+* [BunsenLabs en español](https://mewe.com/join/bunsenlabsenespa%C3%B1ol) on mewe.com (migrated from Google Plus after it was discontinued)
+* Telegram group of Spanish-speaking users: [BunsenLabs ES](https://t.me/esbunsenlabs)
 * [DeviantArt group](http://bunsenlabs.deviantart.com/)
 * Subreddit [r/BunsenLabs](https://www.reddit.com/r/BunsenLabs/)
+* IRC channel [#bunsenlabs@freenode](irc://chat.freenode.net:6697/#bunsenlabs)
 * Facebook Group [#! BunsenLabs Linux](https://www.facebook.com/groups/43721619798/)
-* Telegram group of Spanish-speaking users: [BunsenLabs ES](https://t.me/esbunsenlabs)
 
 ## Where is the BL source code?
 
