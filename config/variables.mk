@@ -5,8 +5,8 @@
 RELEASE_CODENAME           = Lithium
 RELEASE_CODENAME_LOWERCASE = $(shell echo $(RELEASE_CODENAME) | tr '[A-Z]' '[a-z]')
 RELEASE_VERSION            = 10
-RELEASE_DATE               = August 1st, 2020
-RELEASE_ANNOUNCEMENT_URL   = https://forums.bunsenlabs.org/viewtopic.php?id=4772
+RELEASE_DATE               = August 2nd, 2020
+RELEASE_ANNOUNCEMENT_URL   = https://forums.bunsenlabs.org/viewtopic.php?id=6861
 
 DDL_BASE_URL               = https://ddl.bunsenlabs.org/ddl
 ISO_BASE_NAME              = bl-$(RELEASE_CODENAME)$(RELEASE_VERSION)
