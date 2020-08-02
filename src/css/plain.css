@@ -386,6 +386,8 @@ footer {
   color: #fff;
   font-size: 2ex;
   text-decoration:none;
+  /* To prevent jiggling layouts on pages that have no navbar highlight */
+  border-bottom: 4px solid #272822;
 }
 
 .nav-row a:hover {
