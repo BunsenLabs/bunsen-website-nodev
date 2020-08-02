@@ -4,10 +4,6 @@
 <p>This page has been been verified to be functional only on Firefox >=38
 and Chrome/Chromium >= 48 with experimental JS script features
 ('harmony') enabled. It may work for you or not.</p></div>
-<div class="info" id="agent-palemoon" style="display:none">
-<p>It looks like you are using the PaleMoon browser – please be
-informed that this page will not (yet) run on that browser's JavaScript
-engine for its lack of ECMAScript 6 features.</p></div>
 
 <form action="/repoidx.html" method="get" style="text-align:center">
 <select id="filter-key" title="Select the package property to filter by" name="k" style="width:20%;display:inline;">
@@ -27,7 +23,6 @@ engine for its lack of ECMAScript 6 features.</p></div>
 <div id="bl-repo-index"></div>
 <div style="margin-bottom:20px"></div>
 
-<script type="text/javascript;version=1.7" src="js/bl-repo-index.js"></script>
 <script type="text/javascript" src="/js/bl-repo-index.js"></script>
 <script type="text/javascript">
 // From https://stackoverflow.com/questions/9847580. Why is the web so shitty?
@@ -37,7 +32,6 @@ var isIE = /*@cc_on!@*/false || !!document.documentMode;
 var isEdge = !isIE && !!window.StyleMedia;
 var b,ua = window.navigator.userAgent;
 if(isOpera || isSafari || isIE || isEdge) document.getElementById("agent-notchrome").style.display = "block";
-if(ua.indexOf("PaleMoon")>-1) document.getElementById("agent-palemoon").style.display = "block";
 </script>
 <noscript>
 <div class="warning">
