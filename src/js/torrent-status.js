@@ -27,7 +27,11 @@ function update_torrent_status() {
           n.classList.add("torrent-status-active");
           n.classList.remove("torrent-status-unknown");
         }
-        n.textContent = `${ d.torrents[id].s } seeders | ${ d.torrents[id].l } leechers`;
+        const seeders = d.torrents[id].s;
+        const leechers = d.torrents[id].l;
+        const seeders_label = seeders == 1 ? "seeder" : "seeders";
+        const leechers_label = leechers == 1 ? "leecher" : "leechers";
+        n.textContent = `${seeders} ${seeders_label} | ${leechers} ${leechers_label}`;
       }
     });
   });
