@@ -57,7 +57,7 @@ as the place to voice suggestions and report bugs.
 We have quite a few specialty threads, like the [Conky weather+moon
 scripts](https://forums.bunsenlabs.org/viewtopic.php?id=189) thread.
 
-There are a few independent communities, see [here for a list](https://www.bunsenlabs.org/faq.html#independent-channels).
+There are a few independent communities, see [here for a list](/faq.html#community-channels).
 </div>
 </div>
 
