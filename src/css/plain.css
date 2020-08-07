@@ -296,7 +296,8 @@ img.linkbadge:hover {
 }
 
 span.indexheader {
-  font-family: "Open Sans Light";
+  font-family: "Open Sans";
+  font-weight: 300;
   padding-bottom: 8px;
   font-size: 50px;
   flex:auto;
