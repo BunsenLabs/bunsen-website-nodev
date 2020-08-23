@@ -14,7 +14,6 @@ Thank you!
 
 ## Paypal
 
-
 <div class="emph center">
 *By choosing to click the below link to the PayPal service, you are
 subject to their [privacy policy](https://www.paypal.com/de/webapps/mpp/ua/privacy-full)
@@ -36,20 +35,21 @@ Bitcoin donations may be made to the following address:
 <center>[<monospace>1EEXFX6eCDC1Q8Hs3af7wfZB4yJKkGdFFT</monospace>](bitcoinaddress.txt)</center>
 </div>
 
-## DigitalOcean referral
+## Refferral links
 
-Besides donating cash, and supposing you already intended to sign up to
-DigitalOcean's hosting service, you can also make use of our referral
-link in order to support our hosting expenses directly:
+If you personally have a use for one of the cloud services we use and have not already signed up
+with them, you can also support the project by using one of the referral links below. These links
+are tied to you spending money on these platforms, so please don't feel obliged to sign up with
+these services with you don't intend to use them.
 
-<div class="emph">
-*By choosing to click the below link to the DigitalOcean service, you
-become subject to their [privacy
-policy](https://www.digitalocean.com/legal/privacy/) and [terms of
-service](https://www.digitalocean.com/legal/terms/).*
-
-<center> [Referral link](https://m.do.co/c/f8d7dfb87c4f) </center>
-</div>
+<center>
+  <p>
+    <a class="download-button blue" href="https://m.do.co/c/f8d7dfb87c4f">DigitalOcean</a>
+  </p>
+  <p>
+    <a class="download-button red" href="https://hetzner.cloud/?ref=Kgv9cQrvlorH">Hetzner Cloud</a>
+  </p>
+</center>
 
 ## Funding status
 

@@ -224,14 +224,28 @@ a.download-button, a.download-button:hover {
   text-decoration: underline;
 }
 
+main a.download-button, main a.download-button:visited {
+  font-family: Roboto;
+}
+
 a.download-button.blue, a.download-button.blue:hover {
   border: 1px solid rgba(0, 62, 234, 0.3);
   background-color: rgba(0, 62, 234, 0.3);
 }
 
-a.download-button.blue:hover {
+a.download-button.red:hover {
   border: 1px solid #272822;
 }
+
+a.download-button.red, a.download-button.red:hover {
+  border: 1px solid rgba(234, 0, 16, 0.3);
+  background-color: rgba(234, 0, 16, 0.3);
+}
+
+a.download-button.blue:hover, a.download-button.red:hover {
+  border: 1px solid #272822;
+}
+
 
 a.download-button.grey, a.download-button.grey:hover {
   border: 1px solid rgba(62, 62, 62, 0.3);
