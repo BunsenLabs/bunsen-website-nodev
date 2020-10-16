@@ -1,5 +1,4 @@
-config/donations.csv
-config/donations.csv.bak
+config/donations*
 dst
 include/favicons.html
 include/index/gallery*.html
