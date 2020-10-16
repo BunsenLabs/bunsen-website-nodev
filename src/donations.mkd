@@ -46,10 +46,10 @@ these services with you don't intend to use them.
 
 <center>
   <p>
-    <a class="download-button blue" href="https://m.do.co/c/f8d7dfb87c4f">DigitalOcean</a>
+    <a class="download-button red" href="https://hetzner.cloud/?ref=Kgv9cQrvlorH">Hetzner Cloud</a>
   </p>
   <p>
-    <a class="download-button red" href="https://hetzner.cloud/?ref=Kgv9cQrvlorH">Hetzner Cloud</a>
+    <a class="download-button blue" href="https://m.do.co/c/f8d7dfb87c4f">DigitalOcean</a>
   </p>
 </center>
 
