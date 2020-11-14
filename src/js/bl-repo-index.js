@@ -167,10 +167,26 @@ String.prototype.cfl = function() {
   return this.charAt(0).toUpperCase() + this.slice(1);
 }
 
+/* For later validation, the following values are permissble as 'k' search params */
+const ALLOWED_FILTER_KEYS = [
+  "any",
+  "depends",
+  "maintainer",
+  "name-descripton",
+  "recommends",
+  "section",
+  "suggests",
+  "version",
+];
+
 function search_params() {
   let url = new URL(window.location);
   let sp = url.searchParams;
   if(!sp.has("k") || !sp.has("v")) return false;
+  if(!sp.get("k") in ALLOWED_FILTER_KEYS) {
+    console.warn(`Received invalid value for 'k' query param: ${sp.get("k")}`);
+    return false;
+  }
   return sp;
 }
 
