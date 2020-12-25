@@ -16,9 +16,9 @@ shift 2
     echo "done." >&2
 
     if [[ $size = 180 ]]; then
-      echo "<link rel='apple-touch-icon' href='/img/favicon${size}.png'>"
+      echo "<link rel=\"apple-touch-icon\" href=\"/img/favicon${size}.png\">"
     else
-      echo "<link rel='icon' href='/img/favicon${size}.png' sizes='${size}x${size}'>"
+      echo "<link rel=\"icon\" href=\"/img/favicon${size}.png\" sizes=\"${size}x${size}\">"
     fi
 
   done
