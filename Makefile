@@ -1,7 +1,7 @@
 # vim: set expandtab
 
 # Build system for the www.bunsenlabs.org website
-# Copyright (C) 2015-2020 Jens John <dev@2ion.de>
+# Copyright (C) 2015-2021 Jens John <dev@2ion.de>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
