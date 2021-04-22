@@ -84,7 +84,8 @@ PANDOC_VARS=                                           \
 	deploy-static  \
 	deploy-beta    \
 	html-pages     \
-	thumbnails
+	thumbnails     \
+	serve
 
 build: checkout
 	$(call LOG_STATUS,BUILD)
@@ -200,3 +201,6 @@ $(DESTDIR):
 
 $(THUMB_DIR):
 	@mkdir -p $@
+
+serve: build
+	cd $(DESTDIR) && python -m http.server
