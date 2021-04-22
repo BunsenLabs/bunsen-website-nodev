@@ -2,4 +2,35 @@ These are the source files of our main website at https://www.bunsenlabs.org.
 
 The static site is complemented by API services provided by [website-api](https://github.com/BunsenLabs/website-api).
 
-If you noticed a display issue on your viewing device of choice, or if you found a bug in our HTML/Python/JavaScript code or outdated/wrong/misleading content – reports of issues and/or pull requests are greately appreciated!
+If you noticed a display issue on your viewing device of choice, or if you found a bug in our
+HTML/Python/JavaScript code or outdated/wrong/misleading content – reports of issues and/or pull
+requests are greately appreciated!
+
+## Building the website
+
+ * `make -j8`
+
+## Cleaning up the tree
+
+* `make clean`
+
+## Looking at things
+
+ * `make serve`
+
+## Build dependencies
+
+* GNU make
+* bash
+* coreutils
+* findutils
+* git
+* imagemagick
+* inkscape (>=1.0)
+* pandoc
+* python-beautifulsoup4
+* python-django feed generator module
+* python-feedparser
+* python-yaml
+* python3 (>=3.6)
+* sed
