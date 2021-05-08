@@ -44,7 +44,7 @@ DONATION_INTERMEDIATE       = src/donations.intermediate.mkd
 DONATION_DATA               = config/donations.csv
 
 TARGETS                     = $(patsubst %.mkd,%.html,$(wildcard src/*.mkd)) $(DONATION_JSON)
-ASSETS                      = $(TARGETS) src/BunsenLabs-RELEASE.asc src/bundle src/js src/img src/css src/robots.txt src/bitcoinaddress.txt $(GALLERY_INDEX)
+ASSETS                      = $(TARGETS) src/BunsenLabs-RELEASE.asc src/static src/bundle src/js src/img src/css src/robots.txt src/bitcoinaddress.txt $(GALLERY_INDEX)
 
 THUMB_DIM                   = x50
 THUMB_DIR                   = src/img/frontpage-gallery/thumbs
