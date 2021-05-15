@@ -80,9 +80,6 @@ PANDOC_VARS=                                           \
 	checkout       \
 	clean          \
 	deploy-kelaino \
-	deploy-local   \
-	deploy-static  \
-	deploy-beta    \
 	html-pages     \
 	thumbnails     \
 	serve
@@ -117,18 +114,6 @@ clean:
 deploy-kelaino: build
 	$(call LOG_STATUS,DEPLOY,KELAINO)
 	@-rsync -au --progress --human-readable --delete --exclude=private --chmod=D0755,F0644 dst/ root@kelaino:/srv/kelaino.bunsenlabs.org/www/
-
-deploy-static: build
-	$(call LOG_STATUS,DEPLOY,$@)
-	@-rsync -au --progress --human-readable --delete --exclude=private --chmod=D0755,F0644 dst/ root@static.lxc:/srv/www/
-
-deploy-local: build
-	$(call LOG_STATUS,DEPLOY,LOCAL)
-	@-rsync -a --progress --human-readable --delete --chmod=D0755,F0644 dst/ /var/www/
-
-deploy-beta: build
-	$(call LOG_STATUS,DEPLOY,BETA)
-	rclone copy -P ./dst/ $(BLBETALOCATION)
 
 $(FAVICON_HEADER): $(FAVICON_SOURCE)
 	$(call LOG_STATUS,FAVICON,$(FAVICON_SIZES))
