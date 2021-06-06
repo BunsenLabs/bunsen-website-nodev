@@ -18,7 +18,7 @@ news feed via [Planet Debian](http://planet.debian.org/deriv/).
 * Telegram group of Spanish-speaking users: [BunsenLabs ES](https://t.me/esbunsenlabs)
 * [DeviantArt group](http://bunsenlabs.deviantart.com/)
 * Subreddit [r/BunsenLabs](https://www.reddit.com/r/BunsenLabs/)
-* IRC channel [#bunsenlabs@freenode](irc://chat.freenode.net:6697/#bunsenlabs)
+* IRC channel [#bunsenlabs@libera.chat](ircs://irc.libera.chat:6697/#bunsenlabs)
 * Facebook Group [#! BunsenLabs Linux](https://www.facebook.com/groups/43721619798/)
 
 ## Where is the BL source code?
